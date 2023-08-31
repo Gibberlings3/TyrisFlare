@@ -1,7 +1,7 @@
 BACKUP ~tyrisflare/backup~
 SUPPORT ~https://www.gibberlings3.net/forums/forum/169-tyris-flare/~
 
-VERSION ~v9~
+VERSION ~v10~
 ASK_EVERY_COMPONENT
 
 ALWAYS
@@ -19,10 +19,23 @@ ALWAYS
       OUTER_SET EVAL ~%name_source%~ = bg2_chapter
     END
 
-    LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 STR_VAR tra_path = EVAL ~tyrisflare/languages~  END
-	
-	INCLUDE ~tyrisflare/lib/cd_portrait_copy.tph~
+    // Convert strings to UTF-8 for BGEE/BG2EE
+    // No exception, everything needs to be converted
+    // setup.tra contains in game texts as well as installation texts and need to be converted
+    ACTION_DEFINE_ARRAY rh#noconvert BEGIN END
+    // any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
+    ACTION_DEFINE_ARRAY rh#reload BEGIN setup-tyrisflare END
 
+    LAF HANDLE_CHARSETS
+      INT_VAR
+        infer_charsets = 1
+      STR_VAR
+        tra_path = EVAL ~tyrisflare/languages~
+        noconvert_array = rh#noconvert
+        reload_array = rh#reload
+    END
+
+    INCLUDE ~tyrisflare/lib/cd_portrait_copy.tph~
   END
   
 END
@@ -35,8 +48,10 @@ README ~tyrisflare/readme-tyrisflare.html~
 
 AUTO_TRA ~tyrisflare/languages/%s~
 LANGUAGE ~English~ ~English~ ~tyrisflare/languages/english/setup-tyrisflare.tra~
+LANGUAGE ~Russian (by shaker653 arcanecoast.ru)~ ~Russian~ ~tyrisflare/languages/russian/setup-tyrisflare.tra~
 
 BEGIN @0
+LABEL TyrisFlare-main
 
 ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
 
@@ -410,42 +425,49 @@ LAF ~HANDLE_AUDIO~ STR_VAR audio_path = "tyrisflare/audio/ogg" END
 
 
 BEGIN @101000 DESIGNATED 101
+LABEL TyrisFlare-Alternate_Portrait_1
 REQUIRE_COMPONENT ~setup-tyrisflare.tp2~ ~0~ @101001
 SUBCOMPONENT @101002
   
 LAF cd_portrait_copy STR_VAR source = ~alt1~ destination = ~g#tyris~ source_path = ~tyrisflare/portraits~ END
 
 BEGIN @102000
+LABEL TyrisFlare-Alternate_Portrait_2
 REQUIRE_COMPONENT ~setup-tyrisflare.tp2~ ~0~ @101001
 SUBCOMPONENT @101002
   
 LAF cd_portrait_copy STR_VAR source = ~alt2~ destination = ~g#tyris~ source_path = ~tyrisflare/portraits~ END
 
 BEGIN @103000
+LABEL TyrisFlare-Alternate_Portrait_3
 REQUIRE_COMPONENT ~setup-tyrisflare.tp2~ ~0~ @101001
 SUBCOMPONENT @101002
   
 LAF cd_portrait_copy STR_VAR source = ~alt3~ destination = ~g#tyris~ source_path = ~tyrisflare/portraits~ END
 
 BEGIN @104000
+LABEL TyrisFlare-Alternate_Portrait_4
 REQUIRE_COMPONENT ~setup-tyrisflare.tp2~ ~0~ @101001
 SUBCOMPONENT @101002
   
 LAF cd_portrait_copy STR_VAR source = ~alt4~ destination = ~g#tyris~ source_path = ~tyrisflare/portraits~ END
 
 BEGIN @105000
+LABEL TyrisFlare-Alternate_Portrait_5
 REQUIRE_COMPONENT ~setup-tyrisflare.tp2~ ~0~ @101001
 SUBCOMPONENT @101002
   
 LAF cd_portrait_copy STR_VAR source = ~alt5~ destination = ~g#tyris~ source_path = ~tyrisflare/portraits~ END
 
 BEGIN @106000
+LABEL TyrisFlare-Alternate_Portrait_6
 REQUIRE_COMPONENT ~setup-tyrisflare.tp2~ ~0~ @101001
 SUBCOMPONENT @101002
   
 LAF cd_portrait_copy STR_VAR source = ~alt6~ destination = ~g#tyris~ source_path = ~tyrisflare/portraits~ END
 
 BEGIN @107000
+LABEL TyrisFlare-Alternate_Portrait_7
 REQUIRE_COMPONENT ~setup-tyrisflare.tp2~ ~0~ @101001
 SUBCOMPONENT @101002
   
