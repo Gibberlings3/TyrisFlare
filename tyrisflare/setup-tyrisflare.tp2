@@ -1,7 +1,7 @@
 BACKUP ~tyrisflare/backup~
 SUPPORT ~https://www.gibberlings3.net/forums/forum/169-tyris-flare/~
 
-VERSION ~v8~
+VERSION ~v9~
 ASK_EVERY_COMPONENT
 
 ALWAYS
@@ -370,7 +370,7 @@ END ELSE BEGIN
   
     INCLUDE  ~eet/other/eet_functions.tph~
     LAF EET_NPC_TRANSITION INT_VAR type = 2 STR_VAR dv = ~g#tyris_cdtemp~ override_SoA = "g#tyris" override_ToB = "g#tyrs25" dialog_ToB = "g#trs25a" string = ~@60~ stringPosDV = ~Viconia~ SummonedVar = "G#TF.TyrisSummoned_cdtemp" SpawnPlaneVar = "G#TF.TyrisSpawnPlane" END // tyris-as-romance
-    LAF EET_NPC_TRANSITION INT_VAR type = 2 STR_VAR dv = ~g#tyris~ override_SoA = "g#tyris" override_ToB = "g#tyrs25" dialog_ToB = "g#trs251" string = ~@61~ stringPosDV = ~Viconia~ SummonedVar = "G#TF.TyrisSummoned" SpawnPlaneVar = "G#TF.TyrisSpawnPlane" END // tyris
+    LAF EET_NPC_TRANSITION INT_VAR type = 2 STR_VAR dv = ~g#tyris~ override_SoA = "g#tyris" override_ToB = "g#tyrs25" dialog_ToB = "g#trs25A" string = ~@61~ stringPosDV = ~Viconia~ SummonedVar = "G#TF.TyrisSummoned" SpawnPlaneVar = "G#TF.TyrisSpawnPlane" END // tyris
     
 	COPY_EXISTING ~fatesp.dlg~ ~override~ // add additional triggers/actions for angelo-as-romance
 	  DECOMPILE_AND_PATCH BEGIN
