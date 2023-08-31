@@ -1,0 +1,452 @@
+BACKUP ~tyrisflare/backup~
+SUPPORT ~https://www.gibberlings3.net/forums/forum/169-tyris-flare/~
+
+VERSION ~v8~
+ASK_EVERY_COMPONENT
+
+ALWAYS
+
+  ACTION_IF NOT VARIABLE_IS_SET bg2_chapter THEN BEGIN // check to make this happen only once per install
+
+    ACTION_IF GAME_IS ~eet~ BEGIN
+      OUTER_SET bg2_chapter = 12
+    END ELSE BEGIN
+      OUTER_SET bg2_chapter = 0
+    END
+    OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+      OUTER_SET bg2_chapter = bg2_chapter + 1
+      OUTER_SPRINT name_source ~bg2_chapter_%i%~
+      OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+    END
+
+    LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 STR_VAR tra_path = EVAL ~tyrisflare/languages~  END
+	
+	INCLUDE ~tyrisflare/lib/cd_portrait_copy.tph~
+
+  END
+  
+END
+
+ALWAYS
+
+END
+
+README ~tyrisflare/readme-tyrisflare.html~
+
+AUTO_TRA ~tyrisflare/languages/%s~
+LANGUAGE ~English~ ~English~ ~tyrisflare/languages/english/setup-tyrisflare.tra~
+
+BEGIN @0
+
+ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
+
+  LOAD_TRA ~tyrisflare/languages/%LANGUAGE%/ee.tra~
+  
+  ADD_JOURNAL EXISTING @4 @11 @26 USING ~tyrisflare/languages/%LANGUAGE%/bodhiabduction.tra~
+  
+  COPY ~tyrisflare/bams/cg#tfamr.bmp~ ~override~
+  
+  EXTEND_TOP ~neera.bcs~ ~tyrisflare/scripts/biowarenpcs/neera.baf~
+  EXTEND_TOP ~dorn.bcs~ ~tyrisflare/scripts/biowarenpcs/dorn.baf~
+
+END ELSE BEGIN
+
+  COPY ~tyrisflare/bams/cg#tfamr.bam~ ~override~
+
+END
+
+// IDS Files
+
+APPEND ~state.ids~ ~0x80101FEF CD_STATE_NOTVALID~
+  UNLESS ~CD_STATE_NOTVALID~
+
+// BAMs
+
+COPY ~tyrisflare/bams/cg#tfamr.bam~ ~override~
+     ~tyrisflare/bams/ig#tfamr.bam~ ~override~
+     ~tyrisflare/bams/ig#tfbdy.bam~ ~override~
+     ~tyrisflare/bams/ig#tflck.bam~ ~override~
+     ~tyrisflare/bams/g#baserd.bam~ ~override~
+     ~tyrisflare/bams/g#baserd.vvc~ ~override~
+
+// Creatures
+
+COPY ~tyrisflare/creatures/g#tfspwn.cre~ ~override~
+COPY ~tyrisflare/creatures/g#tyrs8.cre~  ~override~
+     ~tyrisflare/creatures/g#tyrs10.cre~ ~override~
+     ~tyrisflare/creatures/g#tyrs11.cre~ ~override~
+     ~tyrisflare/creatures/g#tyrs13.cre~ ~override~
+  SAY NAME1 @1
+  SAY NAME2 @1
+  SAY MORALE @2
+  SAY HAPPY @3
+  SAY UNHAPPY_ANNOYED @4
+  SAY UNHAPPY_SERIOUS @5
+  SAY UNHAPPY_BREAKING @6
+  SAY LEADER @7
+  SAY TIRED @8
+  SAY BORED @9
+  SAY BATTLE_CRY1 @10
+  SAY BATTLE_CRY2 @11
+  SAY BATTLE_CRY3 @12
+  SAY DAMAGE @13
+  SAY DYING @14
+  SAY HURT @15
+  SAY AREA_FOREST @16
+  SAY AREA_CITY @17
+  SAY AREA_DUNGEON @18
+  SAY AREA_DAY @19
+  SAY AREA_NIGHT @20
+  SAY SELECT_COMMON1 @21
+  SAY SELECT_COMMON2 @22
+  SAY SELECT_COMMON3 @23
+  SAY SELECT_COMMON4 @24
+  SAY SELECT_COMMON5 @25
+  SAY SELECT_ACTION1 @26
+  SAY SELECT_ACTION2 @27
+  SAY SELECT_ACTION3 @28
+  SAY SELECT_ACTION4 @29
+  SAY SELECT_ACTION5 @30
+  SAY SELECT_ACTION6 @31
+  SAY SELECT_RARE1 @32
+  SAY SELECT_RARE2 @33
+  SAY CRITICAL_HIT @34
+  SAY CRITICAL_MISS @35
+  SAY TARGET_IMMUNE @36
+  SAY INVENTORY_FULL @37
+  SAY SPELL_DISRUPTED @38
+  SAY BIO @39
+
+COPY_EXISTING ~skele2.cre~ ~override/g#tfskl1.cre~
+  WRITE_SHORT 0x24 1 // Change current HP to 1
+  WRITE_SHORT 0x26 1 // Change max HP to 1
+  WRITE_SHORT 0x46 20 // Change natural AC to 20
+  WRITE_SHORT 0x48 20 // Change effective AC to 20
+  WRITE_ASCII DEATHVAR ~g#tfskeleton1~ #32
+  WRITE_BYTE 0x270 0x80 // Change to be NEUTRAL
+  ADD_CRE_ITEM ~sw1h04~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP
+
+COPY_EXISTING ~skele2.cre~ ~override/g#tfskl2.cre~
+  WRITE_SHORT 0x24 1 // Change current HP to 1
+  WRITE_SHORT 0x26 1 // Change max HP to 1
+  WRITE_SHORT 0x46 20 // Change natural AC to 20
+  WRITE_SHORT 0x48 20 // Change effective AC to 20
+  WRITE_ASCII DEATHVAR ~g#tfskeleton2~ #32
+  WRITE_BYTE 0x270 0x80 // Change to be NEUTRAL
+  ADD_CRE_ITEM ~ax1h01~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP
+
+COPY_EXISTING ~vampjah.cre~ ~override/g#tfvamp.cre~
+  SAY NAME1 @1
+  SAY NAME2 @1
+  WRITE_ASCII DEATHVAR ~g#vampiretyris~ #32
+  WRITE_ASCII DIALOG ~g#tfvamp~ #8
+  WRITE_ASCII SCRIPT_OVERRIDE ~g#tfvamp~ #8
+  WRITE_LONG 0x28 0x6110 // FIGHTER_FEMALE_HUMAN animation
+  WRITE_BYTE 0x2d 0x29 // colors
+  WRITE_BYTE 0x2e 0x2e
+  WRITE_BYTE 0x2f 0x54
+  WRITE_BYTE 0x30 0x17
+  WRITE_BYTE 0x31 0x1e
+  WRITE_BYTE 0x32 0x04
+  REPLACE_CRE_ITEM ~g#tfbody~ #0 #0 #0 NONE QITEM1
+  WRITE_BYTE 0x237 0x02 // sex
+  WRITE_BYTE 0x275 0x02 // gender
+
+// Dialogue
+
+COMPILE ~tyrisflare/dialogue/g#tyris.d~
+        ~tyrisflare/dialogue/g#tyrisp.d~
+        ~tyrisflare/dialogue/g#tyrisj.d~
+        ~tyrisflare/dialogue/bg#tyris.d~
+        ~tyrisflare/dialogue/interjections.d~
+        ~tyrisflare/dialogue/lovetalks.d~
+        ~tyrisflare/dialogue/romanceconflicts.d~
+        ~tyrisflare/dialogue/bodhiabduction.d~
+        ~tyrisflare/dialogue/flirts.d~
+
+// Items
+
+COPY ~tyrisflare/items/g#tfarmr.itm~ ~override~
+  SAY NAME1 @40
+  SAY NAME2 @40
+  SAY UNIDENTIFIED_DESC @58
+  SAY DESC @58
+
+COPY ~tyrisflare/items/g#tfamr2.itm~ ~override~
+  SAY NAME1 @40
+  SAY NAME2 @40
+  SAY UNIDENTIFIED_DESC @41
+  SAY DESC @41
+
+COPY_EXISTING ~miscbn.itm~ ~override/g#tfbody.itm~
+  SAY NAME1 @42
+  SAY NAME2 @42
+  SAY UNIDENTIFIED_DESC @43
+  SAY IDENTIFIED_DESC @43
+  WRITE_ASCII 0x3a ~ig#tfbdy~ // Inventory icon
+
+COPY_EXISTING ~misc2o.itm~ ~override/g#tflock.itm~
+  SAY NAME1 @44
+  SAY NAME2 @44
+  SAY UNIDENTIFIED_DESC @45
+  SAY IDENTIFIED_DESC @45
+  WRITE_LONG 0x34 0x01 // Only sells for 1 gold
+  WRITE_ASCII 0x3a ~ig#tflck~ // Inventory icon
+  WRITE_SHORT 0x42 0x00 // No lore to identify
+
+// Portraits
+LAF cd_portrait_npc STR_VAR source = ~g#tyris~ source_path = ~tyrisflare/portraits~ END
+
+// Scripts
+
+COMPILE ~tyrisflare/scripts/g#tyris.baf~
+        ~tyrisflare/scripts/g#tyrisd.baf~
+        ~tyrisflare/scripts/g#tfspwn.baf~
+
+COMPILE ~tyrisflare/scripts/cutscenes/g#tfcut1.baf~
+COMPILE ~tyrisflare/scripts/g#fix.baf~ // string fixer script
+
+EXTEND_TOP ~baldur.bcs~ ~tyrisflare/scripts/baldur.baf~
+
+EXTEND_BOTTOM ~ar0334.bcs~ ~tyrisflare/scripts/areascripts/ar0334.baf~
+EXTEND_BOTTOM ~ar0413.bcs~ ~tyrisflare/scripts/areascripts/ar0413.baf~
+EXTEND_TOP    ~ar0809.bcs~ ~tyrisflare/scripts/areascripts/ar0809.baf~
+EXTEND_TOP    ~ar1100.bcs~ ~tyrisflare/scripts/areascripts/ar1100.baf~
+EXTEND_TOP    ~ar1105.bcs~ ~tyrisflare/scripts/areascripts/ar1105.baf~
+
+EXTEND_TOP ~aerie.bcs~   ~tyrisflare/scripts/biowarenpcs/aerie.baf~
+EXTEND_TOP ~jaheira.bcs~ ~tyrisflare/scripts/biowarenpcs/jaheira.baf~
+EXTEND_TOP ~viconia.bcs~ ~tyrisflare/scripts/biowarenpcs/viconia.baf~
+
+COMPILE ~tyrisflare/scripts/vampirescripts/g#tfvamp.baf~
+        ~tyrisflare/scripts/vampirescripts/g#tfcutv.baf~
+EXTEND_BOTTOM ~bodhiamb.bcs~ ~tyrisflare/scripts/vampirescripts/bodhiamb.baf~
+EXTEND_BOTTOM ~cleanse.bcs~  ~tyrisflare/scripts/vampirescripts/cleanse.baf~
+EXTEND_BOTTOM ~vampamb.bcs~  ~tyrisflare/scripts/vampirescripts/vampamb.baf~
+EXTEND_BOTTOM ~vluvinfo.bcs~ ~tyrisflare/scripts/vampirescripts/vluvinfo.baf~
+
+COPY_EXISTING ~cut100a.bcs~ ~override~
+              ~cut100b.bcs~ ~override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~MultiPlayerSync()~ ~SetGlobal("G#G3.CompletedSoA","GLOBAL",1) MultiPlayerSync()~
+  COMPILE_BAF_TO_BCS
+  UNLESS ~G#G3.CompletedSoA~
+
+// 2DA Files
+
+APPEND ~pdialog.2da~ ~g#tyris     g#tyrisp     g#tyrisj    g#tyrisd~
+  UNLESS ~g#tyris~
+  UNLESS ~25POST~
+
+APPEND ~pdialog.2da~ ~g#tyris     g#tyrisp     g#tyrisj    g#tyrisd  g#trs25p     g#trs25j   g#trs25d   g#tyrs25~
+  UNLESS ~g#tyris~
+  IF ~25POST~
+
+APPEND ~interdia.2da~ ~g#tyris    bg#tyris~
+  UNLESS ~g#tyris~
+  UNLESS ~25FILE~
+
+APPEND ~interdia.2da~ ~g#tyris    bg#tyris     bg#trs25~
+  UNLESS ~g#tyris~
+  IF ~25FILE~
+
+// Imoen gets her groove back. And her banter file. from Fixpack
+ACTION_IF !GAME_INCLUDES ~tob~ THEN BEGIN
+
+  APPEND ~interdia.2da~ ~IMOEN       BIMOEN2~ UNLESS ~[ %TAB%]BIMOEN2[ %TAB%%LNL%%MNL%%WNL%]~ // fixes SoA version
+  
+END ELSE BEGIN
+
+  COPY_EXISTING ~interdia.2da~ ~override~
+    SET_2DA_ENTRY 17 1 2 ~BIMOEN2~ // fixes ToB version
+    BUT_ONLY
+   
+  // Throne of Bhaal Only Content
+
+  // Creatures
+
+  COPY ~tyrisflare/creatures/g#tyrs16.cre~ ~override~
+    SAY NAME1 @1
+    SAY NAME2 @1
+    SAY MORALE @2
+    SAY HAPPY @3
+    SAY UNHAPPY_ANNOYED @4
+    SAY UNHAPPY_SERIOUS @5
+    SAY UNHAPPY_BREAKING @6
+    SAY LEADER @7
+    SAY TIRED @8
+    SAY BORED @9
+    SAY BATTLE_CRY1 @10
+    SAY BATTLE_CRY2 @11
+    SAY BATTLE_CRY3 @12
+    SAY DAMAGE @13
+    SAY DYING @14
+    SAY HURT @15
+    SAY AREA_FOREST @16
+    SAY AREA_CITY @17
+    SAY AREA_DUNGEON @18
+    SAY AREA_DAY @19
+    SAY AREA_NIGHT @20
+    SAY SELECT_COMMON1 @21
+    SAY SELECT_COMMON2 @22
+    SAY SELECT_COMMON3 @23
+    SAY SELECT_COMMON4 @24
+    SAY SELECT_COMMON5 @25
+    SAY SELECT_ACTION1 @26
+    SAY SELECT_ACTION2 @27
+    SAY SELECT_ACTION3 @28
+    SAY SELECT_ACTION4 @29
+    SAY SELECT_ACTION5 @30
+    SAY SELECT_ACTION6 @31
+    SAY SELECT_RARE1 @32
+    SAY SELECT_RARE2 @33
+    SAY CRITICAL_HIT @34
+    SAY CRITICAL_MISS @35
+    SAY TARGET_IMMUNE @36
+    SAY INVENTORY_FULL @37
+    SAY SPELL_DISRUPTED @38
+    SAY BIO @39
+
+  COPY ~tyrisflare/creatures/g#tflove.cre~ ~override~
+    SAY NAME1 @59
+    SAY NAME2 @59
+
+  // Dialogue
+
+  COMPILE EVALUATE_BUFFER ~tyrisflare/dialogue/g#trs25a.d~
+                          ~tyrisflare/dialogue/g#trs25p.d~
+                          ~tyrisflare/dialogue/g#trs25j.d~
+                          ~tyrisflare/dialogue/bg#trs25.d~
+                          ~tyrisflare/dialogue/expinterjections.d~
+                          ~tyrisflare/dialogue/explovetalks.d~
+                          ~tyrisflare/dialogue/g#tflove.d~
+                          ~tyrisflare/dialogue/finalsolarchoice.d~
+                          ~tyrisflare/dialogue/expflirts.d~
+
+  // Scripts
+
+  COMPILE ~tyrisflare/scripts/g#tyrs25.baf~
+          ~tyrisflare/scripts/g#trs25d.baf~
+
+  EXTEND_TOP ~baldur25.bcs~ ~tyrisflare/scripts/baldur25.baf~
+
+  EXTEND_TOP ~ar6200.bcs~ ~tyrisflare/scripts/areascripts/ar6200.baf~
+
+  COMPILE ~tyrisflare/scripts/wraithscripts/g#tfcutl.baf~
+  EXTEND_BOTTOM ~cut218g.bcs~ ~tyrisflare/scripts/wraithscripts/cut218g.baf~
+
+  EXTEND_TOP ~imoe25.bcs~ ~tyrisflare/scripts/biowarenpcs/imoe25.baf~
+
+  // 2DA Files
+  OUTER_SET $tyris_epilogues(1) = RESOLVE_STR_REF(@46) // Regular epilogue: Mortal
+  OUTER_SET $tyris_epilogues(2) = RESOLVE_STR_REF(@47) // Regular epilogue: Ascension (sent home)
+  OUTER_SET $tyris_epilogues(3) = RESOLVE_STR_REF(@48) // Regular epilogue: Ascension (not sent home)
+  OUTER_SET $tyris_epilogues(4) = RESOLVE_STR_REF(@49) // Romantic epilogue: Mortal and baby
+  OUTER_SET $tyris_epilogues(5) = RESOLVE_STR_REF(@50) // Romantic epilogue: Mortal but no baby
+  OUTER_SET $tyris_epilogues(6) = RESOLVE_STR_REF(@51) // Romantic epilogue: Mortal but promised to discuss baby
+  OUTER_SET $tyris_epilogues(7) = RESOLVE_STR_REF(@52) // Romantic epilogue: Ascension (sent home with no memory) and baby
+  OUTER_SET $tyris_epilogues(8) = RESOLVE_STR_REF(@53) // Romantic epilogue: Ascension (sent home with no memory) but no baby
+  OUTER_SET $tyris_epilogues(9) = RESOLVE_STR_REF(@54) // Romantic epilogue: Ascension (sent home) and baby
+  OUTER_SET $tyris_epilogues(0) = RESOLVE_STR_REF(@55) // Romantic epilogue: Ascension (sent home) but no baby
+  OUTER_SET $tyris_epilogues(a) = RESOLVE_STR_REF(@56) // Romantic epilogue: Ascension (not sent home) and baby
+  OUTER_SET $tyris_epilogues(b) = RESOLVE_STR_REF(@57) // Romantic epilogue: Ascension (not sent home) but no baby
+  
+  ACTION_PHP_EACH tyris_epilogues AS suffix => string BEGIN
+
+    COPY ~tyrisflare/2das/g#tfend.2da~ ~override/g#tfend%suffix%.2da~ // copy template
+      REPLACE_TEXTUALLY ~99999~ ~%string%~
+  
+  END	  
+  
+  // fate spirit summoning
+
+  ACTION_IF !FILE_EXISTS ~eet/other/eet_functions.tph~ BEGIN
+
+    COMPILE ~tyrisflare/dialogue/fatesp.d~
+    EXTEND_TOP ~ar4000.bcs~ ~tyrisflare/scripts/areascripts/ar4000.baf~
+    EXTEND_TOP ~ar4500.bcs~ ~tyrisflare/scripts/areascripts/ar4500.baf~  
+  
+  END ELSE BEGIN
+  
+    INCLUDE  ~eet/other/eet_functions.tph~
+    LAF EET_NPC_TRANSITION INT_VAR type = 2 STR_VAR dv = ~g#tyris_cdtemp~ override_SoA = "g#tyris" override_ToB = "g#tyrs25" dialog_ToB = "g#trs25a" string = ~@60~ stringPosDV = ~Viconia~ SummonedVar = "G#TF.TyrisSummoned_cdtemp" SpawnPlaneVar = "G#TF.TyrisSpawnPlane" END // tyris-as-romance
+    LAF EET_NPC_TRANSITION INT_VAR type = 2 STR_VAR dv = ~g#tyris~ override_SoA = "g#tyris" override_ToB = "g#tyrs25" dialog_ToB = "g#trs251" string = ~@61~ stringPosDV = ~Viconia~ SummonedVar = "G#TF.TyrisSummoned" SpawnPlaneVar = "G#TF.TyrisSpawnPlane" END // tyris
+    
+	COPY_EXISTING ~fatesp.dlg~ ~override~ // add additional triggers/actions for angelo-as-romance
+	  DECOMPILE_AND_PATCH BEGIN
+	    REPLACE_TEXTUALLY ~Dead("g#tyris_cdtemp")~ ~Dead("g#tyris") Global("G#TF.TyrisMatch","GLOBAL",1) !Global("AerieRomanceActive","GLOBAL",2) !Global("JaheiraRomanceActive","GLOBAL",2) !Global("ViconiaRomanceActive","GLOBAL",2) !Global("NeeraRomanceActive","GLOBAL",2) !Global("DornRomanceActive","GLOBAL",2)~
+	    REPLACE_TEXTUALLY ~SetGlobal("G#TF.TyrisSummoned_cdtemp","GLOBAL",1)~ ~SetGlobal("G#TF.TyrisSummoned","GLOBAL",1) SetGlobal("G#TF.TyrisRomanceActive","GLOBAL",2) SetGlobal("G#TF.SleptWithTyris","GLOBAL",1)~
+	    REPLACE_TEXTUALLY ~_cdtemp~ ~~ // any other cleanup
+	  END
+	  BUT_ONLY
+	  
+	COPY_EXISTING ~ar4000.bcs~ ~override~ // cleanup/disable cruft
+	              ~ar4500.bcs~ ~override~
+	  DECOMPILE_AND_PATCH BEGIN
+	    REPLACE_TEXTUALLY ~[ %TAB%]Global("G#TF.TyrisSummoned_cdtemp","GLOBAL",[01])~ ~False()~
+	    REPLACE_TEXTUALLY ~_cdtemp~ ~~ // any other cleanup
+	  END
+	  BUT_ONLY
+  
+  END					  
+
+END
+
+// Audio
+
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~g3blank.mus~ THEN BEGIN
+  COPY_EXISTING ~songlist.2da~ ~override/songlist.2da~
+    SET_2DA_ENTRY 2 1 2 ~g3blank~
+    SET_2DA_ENTRY 2 2 2 ~g3blank.mus~
+
+  COPY ~tyrisflare/audio/g3blank.mus~ ~music~
+END
+
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~g3mute.wav~ THEN BEGIN
+  COPY ~tyrisflare/audio/wav/g3mute.wav~ ~override~
+END
+
+LAF ~HANDLE_AUDIO~ STR_VAR audio_path = "tyrisflare/audio/ogg" END
+
+
+BEGIN @101000 DESIGNATED 101
+REQUIRE_COMPONENT ~setup-tyrisflare.tp2~ ~0~ @101001
+SUBCOMPONENT @101002
+  
+LAF cd_portrait_copy STR_VAR source = ~alt1~ destination = ~g#tyris~ source_path = ~tyrisflare/portraits~ END
+
+BEGIN @102000
+REQUIRE_COMPONENT ~setup-tyrisflare.tp2~ ~0~ @101001
+SUBCOMPONENT @101002
+  
+LAF cd_portrait_copy STR_VAR source = ~alt2~ destination = ~g#tyris~ source_path = ~tyrisflare/portraits~ END
+
+BEGIN @103000
+REQUIRE_COMPONENT ~setup-tyrisflare.tp2~ ~0~ @101001
+SUBCOMPONENT @101002
+  
+LAF cd_portrait_copy STR_VAR source = ~alt3~ destination = ~g#tyris~ source_path = ~tyrisflare/portraits~ END
+
+BEGIN @104000
+REQUIRE_COMPONENT ~setup-tyrisflare.tp2~ ~0~ @101001
+SUBCOMPONENT @101002
+  
+LAF cd_portrait_copy STR_VAR source = ~alt4~ destination = ~g#tyris~ source_path = ~tyrisflare/portraits~ END
+
+BEGIN @105000
+REQUIRE_COMPONENT ~setup-tyrisflare.tp2~ ~0~ @101001
+SUBCOMPONENT @101002
+  
+LAF cd_portrait_copy STR_VAR source = ~alt5~ destination = ~g#tyris~ source_path = ~tyrisflare/portraits~ END
+
+BEGIN @106000
+REQUIRE_COMPONENT ~setup-tyrisflare.tp2~ ~0~ @101001
+SUBCOMPONENT @101002
+  
+LAF cd_portrait_copy STR_VAR source = ~alt6~ destination = ~g#tyris~ source_path = ~tyrisflare/portraits~ END
+
+BEGIN @107000
+REQUIRE_COMPONENT ~setup-tyrisflare.tp2~ ~0~ @101001
+SUBCOMPONENT @101002
+  
+LAF cd_portrait_copy STR_VAR source = ~alt7~ destination = ~g#tyris~ source_path = ~tyrisflare/portraits~ END

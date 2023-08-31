@@ -1,0 +1,10 @@
+IF // Kill Tyris romance if Aerie romance becomes serious
+  InParty(Myself)
+  Global("AerieRomanceActive","GLOBAL",2)
+  OR(2)
+    Global("G#TF.TyrisRomanceActive","GLOBAL",1)
+    Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.TyrisRomanceActive","GLOBAL",3)
+END

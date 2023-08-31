@@ -1,0 +1,9 @@
+IF
+  Entered([ANYONE])
+  Global("GotBook94","GLOBAL",1)
+  Global("G#TF.TyrisVampire","GLOBAL",3)
+THEN
+  RESPONSE #11
+    DisplayString(LastTrigger,56407) // 'This appears to be the statue described in the Vampiricus Omnibus. The book spoke of placing the vampire and its master's heart within the statue's arms to destroy the curse.'
+    Wait(2)
+END

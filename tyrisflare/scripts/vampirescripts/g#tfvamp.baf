@@ -1,0 +1,25 @@
+IF
+	Global("C6BodhiFight","AR0809",1)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #1
+		Enemy()
+END
+
+IF
+	Die()
+THEN
+	RESPONSE #1
+		SetGlobal("G#TF.TyrisVampire","GLOBAL",3)
+		DropInventory()
+		DestroySelf()
+END
+
+IF
+	See([PC])
+	Delay(12)
+	Allegiance(Myself,ENEMY)
+THEN
+	RESPONSE #1
+		ReallyForceSpellDead([PC],VAMPIRE_DOMINATION)
+END

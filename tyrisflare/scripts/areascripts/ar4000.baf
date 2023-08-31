@@ -1,0 +1,8 @@
+IF // Prevent Fate Spirit spawning if she's already in party
+  InParty("G#Tyris")
+  Global("G#TF.TyrisSummoned","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("G#TF.TyrisSummoned","GLOBAL",2)
+    Continue()
+END

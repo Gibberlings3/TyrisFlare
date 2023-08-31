@@ -1,0 +1,57 @@
+IF
+  Exists("G#Tyris")
+  !Dead("G#Tyris")
+  !Global("G#TF.TyrisSpawn","GLOBAL",1)
+  !Global("G#TF.TyrisJoined","GLOBAL",1)
+  XPLT(Player1,400001)
+THEN
+  RESPONSE #1
+    ActionOverride("G#Tyris",DestroySelf())
+    CreateCreature("G#TYRS8",[1063.262],4)
+    SetGlobal("G#TF.TyrisSpawn","GLOBAL",1)
+    Continue()
+END
+
+IF
+  Exists("G#Tyris")
+  !Dead("G#Tyris")
+  !Global("G#TF.TyrisSpawn","GLOBAL",2)
+  !Global("G#TF.TyrisJoined","GLOBAL",1)
+  XPGT(Player1,400000)
+  XPLT(Player1,800001)
+THEN
+  RESPONSE #1
+    ActionOverride("G#Tyris",DestroySelf())
+    CreateCreature("G#TYRS10",[1063.262],4)
+    SetGlobal("G#TF.TyrisSpawn","GLOBAL",2)
+    Continue()
+END
+
+IF
+  Exists("G#Tyris")
+  !Dead("G#Tyris")
+  !Global("G#TF.TyrisSpawn","GLOBAL",3)
+  !Global("G#TF.TyrisJoined","GLOBAL",1)
+  XPGT(Player1,800000)
+  XPLT(Player1,1200001)
+THEN
+  RESPONSE #1
+    ActionOverride("G#Tyris",DestroySelf())
+    CreateCreature("G#TYRS11",[1063.262],4)
+    SetGlobal("G#TF.TyrisSpawn","GLOBAL",3)
+    Continue()
+END
+
+IF
+  Exists("G#Tyris")
+  !Dead("G#Tyris")
+  !Global("G#TF.TyrisSpawn","GLOBAL",4)
+  !Global("G#TF.TyrisJoined","GLOBAL",1)
+  XPGT(Player1,1200000)
+THEN
+  RESPONSE #1
+    ActionOverride("G#Tyris",DestroySelf())
+    CreateCreature("G#TYRS13",[1063.262],4)
+    SetGlobal("G#TF.TyrisSpawn","GLOBAL",4)
+    Continue()
+END

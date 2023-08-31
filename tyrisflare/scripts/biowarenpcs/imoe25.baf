@@ -1,0 +1,7 @@
+IF // Check for Bhaalspawn abilities
+  GlobalGT("ExpBImoen10","LOCALS",0)
+  !Global("G#TF.ImoenAbilities","GLOBAL",1)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.ImoenAbilities","GLOBAL",1)
+END

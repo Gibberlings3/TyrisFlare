@@ -1,0 +1,12 @@
+IF
+  Global("G#TF.TyrisSummoned","GLOBAL",1)
+  Global("G#TF.TyrisSpawnPlane","GLOBAL",0)
+THEN
+  RESPONSE #1
+    CreateVisualEffect("SPPORTAL",[1999.1218])
+    Wait(2)
+    CreateCreature("G#TYRS16",[1999.1218],0)
+    ActionOverride("G#Tyris",SetBeenInPartyFlags())
+    SetGlobal("G#TF.TyrisSpawnPlane","GLOBAL",1)
+    Continue()
+END

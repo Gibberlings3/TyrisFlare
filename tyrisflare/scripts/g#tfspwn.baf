@@ -1,0 +1,93 @@
+IF
+  See(Player1)
+  TimeOfDay(DAY)
+  XPLT(Player1,400001)
+THEN
+  RESPONSE #1   
+    SetGlobal("G#TF.TyrisSpawn","GLOBAL",1)
+    StartCutSceneMode()
+    MoveViewPoint([2861.1175],VERY_FAST)
+    Wait(1)
+    PlaySound("EFF_108")
+    ScreenShake([2818.1113],5)
+    CreateVisualEffect("G#BASERD",[2818.1113])
+    CreateVisualEffect("G#BASERD",[2914.1048])
+    CreateVisualEffect("G#BASERD",[2861.1175])
+    SmallWait(3)
+    CreateCreature("G#TYRS8",[2818.1113],9)
+    CreateCreature("G#TFSKL1",[2914.1048],1)
+    CreateCreature("G#TFSKL2",[2861.1175],7)
+    StartCutScene("G#TFCUT1")
+    DestroySelf()
+END
+
+IF
+  See(Player1)
+  TimeOfDay(DAY)
+  XPGT(Player1,400000)
+  XPLT(Player1,800001)
+THEN
+  RESPONSE #1   
+    SetGlobal("G#TF.TyrisSpawn","GLOBAL",2)
+    StartCutSceneMode()
+    MoveViewPoint([2861.1175],VERY_FAST)
+    Wait(1)
+    PlaySound("EFF_108")
+    ScreenShake([2818.1113],5)
+    CreateVisualEffect("G#BASERD",[2818.1113])
+    CreateVisualEffect("G#BASERD",[2914.1048])
+    CreateVisualEffect("G#BASERD",[2861.1175])
+    SmallWait(3)
+    CreateCreature("G#TYRS10",[2818.1113],9)
+    CreateCreature("G#TFSKL1",[2914.1048],1)
+    CreateCreature("G#TFSKL2",[2861.1175],7)
+    StartCutScene("G#TFCUT1")
+    DestroySelf()
+END
+
+IF
+  See(Player1)
+  TimeOfDay(DAY)
+  XPGT(Player1,800000)
+  XPLT(Player1,1200001)
+THEN
+  RESPONSE #1 
+    SetGlobal("G#TF.TyrisSpawn","GLOBAL",3)
+    StartCutSceneMode()
+    MoveViewPoint([2861.1175],VERY_FAST)
+    Wait(1)
+    PlaySound("EFF_108")
+    ScreenShake([2818.1113],5)
+    CreateVisualEffect("G#BASERD",[2818.1113])
+    CreateVisualEffect("G#BASERD",[2914.1048])
+    CreateVisualEffect("G#BASERD",[2861.1175])
+    SmallWait(3)
+    CreateCreature("G#TYRS11",[2818.1113],9)
+    CreateCreature("G#TFSKL1",[2914.1048],1)
+    CreateCreature("G#TFSKL2",[2861.1175],7)
+    StartCutScene("G#TFCUT1")
+    DestroySelf()
+END
+
+IF
+  See(Player1)
+  TimeOfDay(DAY)
+  XPGT(Player1,1200000)
+THEN
+  RESPONSE #1   
+    SetGlobal("G#TF.TyrisSpawn","GLOBAL",4)
+    StartCutSceneMode()
+    MoveViewPoint([2861.1175],VERY_FAST)
+    Wait(1)
+    PlaySound("EFF_108")
+    ScreenShake([2818.1113],5)
+    CreateVisualEffect("G#BASERD",[2818.1113])
+    CreateVisualEffect("G#BASERD",[2914.1048])
+    CreateVisualEffect("G#BASERD",[2861.1175])
+    SmallWait(3)
+    CreateCreature("G#TYRS13",[2818.1113],9)
+    CreateCreature("G#TFSKL1",[2914.1048],1)
+    CreateCreature("G#TFSKL2",[2861.1175],7)
+    StartCutScene("G#TFCUT1")
+    DestroySelf()
+END

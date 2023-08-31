@@ -1,0 +1,8 @@
+IF
+  Global("G#TF.TyrisVampire","GLOBAL",1)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.TyrisVampire","GLOBAL",2)
+    CreateCreature("G#TFVAMP",[1473.332],2)
+    Continue()
+END

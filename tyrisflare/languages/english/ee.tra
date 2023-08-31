@@ -1,0 +1,46 @@
+// Overridden lines in Enhanced Edition
+@41   = ~This tough leather armour was created for Tyris in order to provide protection but not preclude her ability to cast spells.  It has recently been patched up by Cromwell the blacksmith, who has made some improvements of his own.
+
+STATISTICS:
+
+Equipped abilities:
+– Spellcasting is not disabled
+– Improves casting speed by 1
+– Fire Resistance: +50%
+
+Armor Class: 5 (3 vs. slashing, 4 vs. piercing and missile)
+Requires:
+ 6 Strength
+
+Weight: 15
+~
+@43   = ~Tyris was captured by Bodhi and infected with vampirism, forcing you to slay her.  There may be some way to revive her, though you don't know what it would be.
+
+STATISTICS:
+
+Weight: 135
+~
+@45   = ~A gift from Tyris, for you to remember her by if you are ever parted.
+
+STATISTICS:
+
+Weight: 1
+~
+// 46 & 48 just done for "Faerûn"
+@46   = ~With the destruction of the Throne of Bhaal and the end of <CHARNAME>'s adventure, Tyris was able to concentrate her efforts on finding a means of returning home: a task <CHARNAME> was more than wiling to assist her in.  For years she travelled Faerûn, seeking out mages and planewalkers alike, but in each case it was to no avail.  Then one day, for no particular reason, she returned to the Umar Hills, only to find a wanted poster bearing her name and description.  Intrigued, Tyris tracked the poster's source to a nearby tavern, whose guests included a familiar dwarf and a barbarian bearing a runestone of transportation and a Golden Axe.  Reunited with her old companions after five and a half years, <CHARNAME> and Tyris Flare parted ways and she finally returned home.~
+@48   = ~With the destruction of the Throne of Bhaal and <CHARNAME>'s ascension, Tyris was able to concentrate her efforts on findng a means of returning home.  For years she travelled Faerûn, seeking out mages and planewalkers alike, but in each case it was to no avail.  Then one day, for no particular reason, she returned to the Umar Hills, only to find a wanted poster bearing her name and description.  Intrigued, Tyris tracked the poster's source to a nearby tavern, whose guests included a familiar dwarf and a barbarian bearing a runestone of transportation and a Golden Axe.  Reunited with her old companions after five and a half years, Tyris Flare finally returned home.~
+
+@58   = ~This tough leather armour was created for Tyris in order to provide protection but not preclude her ability to cast spells.
+
+STATISTICS:
+
+Equipped abilities:
+– Spellcasting is not disabled
+– Improves casting speed by 1
+
+Armor Class: 6 (4 vs. slashing, 5 vs. piercing and missile)
+Requires:
+ 6 Strength
+
+Weight: 15
+~

@@ -1,0 +1,39 @@
+IF // Trigger dream lovetalks
+  InParty(Myself)
+  RealGlobalTimerExpired("G#TF.TyrisRomance","GLOBAL")
+  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  Global("G#TF.TyrisMatch","GLOBAL",1)
+  !AreaType(DUNGEON)
+  See(Player1)
+  !StateCheck("G#Tyris",CD_STATE_NOTVALID)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  !See([ENEMY])
+  CombatCounter(0)
+  OR(1)
+    Global("G#TF.ExpLovetalk","LOCALS",5) // "What do you want?"
+THEN
+  RESPONSE #1
+    IncrementGlobal("G#TF.ExpLovetalk","LOCALS",1)
+    PlaySong(0)
+    PlaySound("G#TFSONG")
+    Interact(Player1)
+END
+
+IF // Trigger post-Saradush lovetalk
+  InParty(Myself)
+  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  Global("G#TF.TyrisMatch","GLOBAL",1)
+  See(Player1)
+  !StateCheck("G#Tyris",CD_STATE_NOTVALID)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  !See([ENEMY])
+  CombatCounter(0)
+  Global("SaradushSacked","GLOBAL",1)
+  Global("G#TF.ExpLovetalk","LOCALS",7) // "So much blood..."
+THEN
+  RESPONSE #1
+    IncrementGlobal("G#TF.ExpLovetalk","LOCALS",1)
+    PlaySong(0)
+    PlaySound("G#TFSONG")
+    Interact(Player1)
+END

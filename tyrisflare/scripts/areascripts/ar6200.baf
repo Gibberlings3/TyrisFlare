@@ -1,0 +1,188 @@
+IF // Regular epilogue: Mortal
+  Global("StartEndBios","AR6200",1)
+  InParty("G#Tyris")
+  !Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  Global("PlayerChoseEssence","GLOBAL",0)
+  Global("G#TF.TyrisBio","GLOBAL",0)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.TyrisBio","GLOBAL",1)
+    TextScreen("G#TFEND1")
+    SmallWait(1)
+    Continue()
+END
+
+IF // Regular epilogue: Ascension (sent home)
+  Global("StartEndBios","AR6200",1)
+  InParty("G#Tyris")
+  !Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  Global("PlayerChoseEssence","GLOBAL",1)
+  Global("G#TF.PromisesToSendTyrisHome","GLOBAL",1)
+  Global("G#TF.TyrisBio","GLOBAL",0)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.TyrisBio","GLOBAL",1)
+    TextScreen("G#TFEND2")
+    SmallWait(1)
+    Continue()
+END
+
+IF // Regular epilogue: Ascension (not sent home)
+  Global("StartEndBios","AR6200",1)
+  InParty("G#Tyris")
+  !Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  Global("PlayerChoseEssence","GLOBAL",1)
+  !Global("G#TF.PromisesToSendTyrisHome","GLOBAL",1)
+  Global("G#TF.TyrisBio","GLOBAL",0)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.TyrisBio","GLOBAL",1)
+    TextScreen("G#TFEND3")
+    SmallWait(1)
+    Continue()
+END
+
+IF // Romantic epilogue: Mortal and baby
+  Global("StartEndBios","AR6200",1)
+  InParty("G#Tyris")
+  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  Global("PlayerChoseEssence","GLOBAL",0)
+  Global("G#TF.Pregnancy","GLOBAL",1)
+  Global("G#TF.TyrisBio","GLOBAL",0)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.TyrisBio","GLOBAL",1)
+    TextScreen("G#TFEND4")
+    SmallWait(1)
+    Continue()
+END
+
+IF // Romantic epilogue: Mortal but no baby
+  Global("StartEndBios","AR6200",1)
+  InParty("G#Tyris")
+  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  Global("PlayerChoseEssence","GLOBAL",0)
+  !Global("G#TF.Pregnancy","GLOBAL",1)
+  !Global("G#TF.DiscussBabyLater","GLOBAL",1)
+  Global("G#TF.TyrisBio","GLOBAL",0)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.TyrisBio","GLOBAL",1)
+    TextScreen("G#TFEND5")
+    SmallWait(1)
+    Continue()
+END
+
+IF // Romantic epilogue: Mortal but promised to discuss baby
+  Global("StartEndBios","AR6200",1)
+  InParty("G#Tyris")
+  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  Global("PlayerChoseEssence","GLOBAL",0)
+  !Global("G#TF.Pregnancy","GLOBAL",1)
+  Global("G#TF.DiscussBabyLater","GLOBAL",1)
+  Global("G#TF.TyrisBio","GLOBAL",0)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.TyrisBio","GLOBAL",1)
+    TextScreen("G#TFEND6")
+    SmallWait(1)
+    Continue()
+END
+
+IF // Romantic epilogue: Ascension (sent home with no memory) and baby
+  Global("StartEndBios","AR6200",1)
+  InParty("G#Tyris")
+  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  Global("PlayerChoseEssence","GLOBAL",1)
+  Global("G#TF.MemoryWipe","GLOBAL",1)
+  Global("G#TF.Pregnancy","GLOBAL",1)
+  Global("G#TF.TyrisBio","GLOBAL",0)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.TyrisBio","GLOBAL",1)
+    TextScreen("G#TFEND7")
+    SmallWait(1)
+    Continue()
+END
+
+IF // Romantic epilogue: Ascension (sent home with no memory) but no baby
+  Global("StartEndBios","AR6200",1)
+  InParty("G#Tyris")
+  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  Global("PlayerChoseEssence","GLOBAL",1)
+  Global("G#TF.MemoryWipe","GLOBAL",1)
+  !Global("G#TF.Pregnancy","GLOBAL",1)
+  Global("G#TF.TyrisBio","GLOBAL",0)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.TyrisBio","GLOBAL",1)
+    TextScreen("G#TFEND8")
+    SmallWait(1)
+    Continue()
+END
+
+IF // Romantic epilogue: Ascension (sent home) and baby
+  Global("StartEndBios","AR6200",1)
+  InParty("G#Tyris")
+  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  Global("PlayerChoseEssence","GLOBAL",1)
+  Global("G#TF.PromisesToSendTyrisHome","GLOBAL",1)
+  !Global("G#TF.MemoryWipe","GLOBAL",1)
+  Global("G#TF.Pregnancy","GLOBAL",1)
+  Global("G#TF.TyrisBio","GLOBAL",0)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.TyrisBio","GLOBAL",1)
+    TextScreen("G#TFEND9")
+    SmallWait(1)
+    Continue()
+END
+
+IF // Romantic epilogue: Ascension (sent home) but no baby
+  Global("StartEndBios","AR6200",1)
+  InParty("G#Tyris")
+  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  Global("PlayerChoseEssence","GLOBAL",1)
+  Global("G#TF.PromisesToSendTyrisHome","GLOBAL",1)
+  !Global("G#TF.MemoryWipe","GLOBAL",1)
+  !Global("G#TF.Pregnancy","GLOBAL",1)
+  Global("G#TF.TyrisBio","GLOBAL",0)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.TyrisBio","GLOBAL",1)
+    TextScreen("G#TFEND0")
+    SmallWait(1)
+    Continue()
+END
+
+IF // Romantic epilogue: Ascension (not sent home) and baby
+  Global("StartEndBios","AR6200",1)
+  InParty("G#Tyris")
+  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  Global("PlayerChoseEssence","GLOBAL",1)
+  !Global("G#TF.PromisesToSendTyrisHome","GLOBAL",1)
+  Global("G#TF.Pregnancy","GLOBAL",1)
+  Global("G#TF.TyrisBio","GLOBAL",0)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.TyrisBio","GLOBAL",1)
+    TextScreen("G#TFENDA")
+    SmallWait(1)
+    Continue()
+END
+
+IF // Romantic epilogue: Ascension (not sent home) but no baby
+  Global("StartEndBios","AR6200",1)
+  InParty("G#Tyris")
+  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  Global("PlayerChoseEssence","GLOBAL",1)
+  !Global("G#TF.PromisesToSendTyrisHome","GLOBAL",1)
+  !Global("G#TF.Pregnancy","GLOBAL",1)
+  Global("G#TF.TyrisBio","GLOBAL",0)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.TyrisBio","GLOBAL",1)
+    TextScreen("G#TFENDB")
+    SmallWait(1)
+    Continue()
+END

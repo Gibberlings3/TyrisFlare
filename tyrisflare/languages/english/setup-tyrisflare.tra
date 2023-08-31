@@ -1,0 +1,110 @@
+@0    = ~Tyris Flare NPC~
+@1    = ~Tyris~
+@2    = ~Pull back!  Pull back!~ [g#tyrs01]
+@3    = ~I'm glad you allowed me to join this group.  We've done great things together.~ [g#tyrs02]
+@4    = ~Actions speak louder than words, my friend.  And your actions are hardly heroic.~ [g#tyrs03]
+@5    = ~I'm getting worried about this group.  I hope I didn't make a bad choice in joining it.~ [g#tyrs04]
+@6    = ~I won't tolerate your behaviour any more!  You may be my only hope of returning home, but I will not walk this bloody path to get there.~ [g#tyrs05]
+@7    = ~So be it.  I will do my best in your stead.~ [g#tyrs06]
+@8    = ~I will continue as long as is necessary, but some rest would be welcome.~ [g#tyrs07]
+@9    = ~Gorgon's breath, there must be something better for us to be doing!~ [g#tyrs08]
+@10   = ~Have at thee!~ [g#tyrs09]
+@11   = ~You will die by my hand!~ [g#tyrs10]
+@12   = ~You will burn, monster!~ [g#tyrs11]
+@13   = ~~ [g#tyrs12]
+@14   = ~~ [g#tyrs13]
+@15   = ~I need help!~ [g#tyrs14]
+@16   = ~This almost reminds me of home...~ [g#tyrs15]
+@17   = ~I've never felt comfortable in cities.  I think I was born to be on the road.~ [g#tyrs16]
+@18   = ~Stay alert and watch your step.  Attack could come at any time.~ [g#tyrs17]
+@19   = ~Ah, this is more like it.  Just the feel of the sun on my skin makes me... never mind.~ [g#tyrs18]
+@20   = ~I understand the need to keep moving, but we leave ourselves exposed by travelling at night.~ [g#tyrs19]
+@21   = ~Yes?~ [g#tyrs20]
+@22   = ~I'm ready.~ [g#tyrs21]
+@23   = ~How can I be of assistance?~ [g#tyrs22]
+@24   = ~What is it?~ [g#tyrs23]
+@25   = ~Is it time?~ [g#tyrs24]
+@26   = ~Very well.~ [g#tyrs25]
+@27   = ~By your command.~ [g#tyrs26]
+@28   = ~If that's what you want.~ [g#tyrs27]
+@29   = ~Let's do this.~ [g#tyrs28]
+@30   = ~Alright then.~ [g#tyrs29]
+@31   = ~Fine.  Let's get on with this.~ [g#tyrs30]
+@32   = ~Yes, I'm listening.  Now stop poking me!~ [g#tyrs31]
+@33   = ~One more prod and you'll taste cold steel or arcane fire.  Perhaps both.~ [g#tyrs32]
+@34   = ~Die you fiend!~ [g#tyrs33]
+@35   = ~What the...?~ [g#tyrs34]
+@36   = ~Demon's blood, this bastard won't fall down!~ [g#tyrs35]
+@37   = ~Where exactly do you want me to put all this?~ [g#tyrs36]
+@38   = ~Guld's teeth!~ [g#tyrs37]
+@39   = ~When asked about her life before meeting you, TYRIS seems hesitant.  When pushed she tells you about growing up in a small village on the edge of a large jungle.  She was taught skills of fighting and survival by her parents and taught the ways of the arcane by the village shaman.  Then one day she returned home to find her parents killed, apparently murdered by the villainous "Death Adder", however she refuses to give much more detail than this.  She soon left the village and met up with a group of like-minded adventurers who were also keen to take revenge on Death Adder.  They proceeded to attack Death Adder's castle and it was during this assault that she was transported to Toril.~
+@40   = ~Tyris Flare's Armour~
+@41   = ~Tyris Flare's Armour
+This tough leather armour was created for Tyris in order to provide protection but not preclude her ability to cast spells.  It has recently been patched up by Cromwell the blacksmith, who has made some improvements of his own.
+
+STATISTICS
+
+Bonuses:
+Decrease Spell Casting Speed by 1
++50% Fire Resistance
+Armor Class: 5
+Weight: 15
+Requires: 6 Strength
+
+Not Usable By:
+ Mage
+ Kensai
+ Monk
+ Avenger
+ Shapeshifter~
+@42   = ~Tyris' Body~
+@43   = ~Tyris was captured by Bodhi and infected with vampirism, forcing you to slay her.  There may be some way to revive her, though you don't know what it would be.~
+@44   = ~Lock of Tyris' Hair~
+@45   = ~A gift from Tyris, for you to remember her by if you are ever parted.~
+@46   = ~With the destruction of the Throne of Bhaal and the end of <CHARNAME>'s adventure, Tyris was able to concentrate her efforts on finding a means of returning home: a task <CHARNAME> was more than wiling to assist her in.  For years she travelled Faerun, seeking out mages and planewalkers alike, but in each case it was to no avail.  Then one day, for no particular reason, she returned to the Umar Hills, only to find a wanted poster bearing her name and description.  Intrigued, Tyris tracked the poster's source to a nearby tavern, whose guests included a familiar dwarf and a barbarian bearing a runestone of transportation and a Golden Axe.  Reunited with her old companions after five and a half years, <CHARNAME> and Tyris Flare parted ways and she finally returned home.~
+@47   = ~True to <PRO_HISHER> word, <CHARNAME>'s new abilities allowed Tyris Flare to return home mere moments after she left.  Resuming their siege of Death Adder's fortress, Tyris and her companions fought their way to his inner sanctum and confronted the fiend himself.  After a grueling battle, they eventually emerged victorious, thanks mostly to Tyris' seemingly newfound abilities.  With the King and Princess rescued and the Golden Axe returned, peace fell on Yuria for a time.  That is, until the ancient warrior Dark Guld rose up and brought with him a new blight on the land.  But that is another tale.~
+@48   = ~With the destruction of the Throne of Bhaal and <CHARNAME>'s ascension, Tyris was able to concentrate her efforts on findng a means of returning home.  For years she travelled Faerun, seeking out mages and planewalkers alike, but in each case it was to no avail.  Then one day, for no particular reason, she returned to the Umar Hills, only to find a wanted poster bearing her name and description.  Intrigued, Tyris tracked the poster's source to a nearby tavern, whose guests included a familiar dwarf and a barbarian bearing a runestone of transportation and a Golden Axe.  Reunited with her old companions after five and a half years, Tyris Flare finally returned home.~
+@49   = ~With the destruction of the Throne of Bhaal, Tyris and <CHARNAME> travelled the Sword Coast for several months, both avoiding the conversation they both knew was inevitable.  Perhaps by chance, perhaps by fate they finally arrived at <CHARNAME>'s childhood home of Candlekeep.  It was there that Tyris gave birth to their daughter.  And in that moment they made the decision to find a way to return to Yuria together.  And so, five years later, Tyris Flare finally returned home along with her husband and child.~
+@50   = ~With the destruction of the Throne of Bhaal, Tyris and <CHARNAME> travelled the Sword Coast for several months, both avoiding the conversation they both knew was inevitable.  Perhaps by chance, perhaps by fate they finally arrived at <CHARNAME>'s childhood home of Candlekeep.  And one night, knowing that it could be avoided no longer, they made the decision to find a way to return to Yuria together.  And so, five years later, Tyris Flare finally returned home along with her husband.~
+@51   = ~With the destruction of the Throne of Bhaal, Tyris and <CHARNAME> travelled the Sword Coast for several months, both avoiding the conversation they both knew was inevitable.  Perhaps by chance, perhaps by fate they finally arrived at <CHARNAME>'s childhood home of Candlekeep.  And one night, knowing that it could be avoided no longer, they made the decision to find a way to return to Yuria together.  But this was not the only decision they made that night as they both knew there was another conversation that they had postponed.  And so, five years later, Tyris Flare finally returned home along with her husband and child.~
+@52   = ~Just as life can be created, so can it be destroyed.  True to his word, <CHARNAME>'s new abilities allowed Tyris Flare to return home mere moments after she left but with no memory of the events that had transpired or any trace of the child they had conceived.  Resuming their siege of Death Adder's fortress, Tyris and her companions fought their way to his inner sanctum and confronted the fiend himself.  After a grueling battle, they eventually emerged bloodied and bruised yet victorious.  With the King and Princess rescued and the Golden Axe returned, peace fell on Yuria for a time.  But Tyris Flare would find little comfort in this: only an inexplicable feeling of emptiness and a longing for something she would never feel again.~
+@53   = ~True to his word, <CHARNAME>'s new abilities allowed Tyris Flare to return home mere moments after she left but with no memory of the events that had transpired.  Resuming their siege of Death Adder's fortress, Tyris and her companions fought their way to his inner sanctum and confronted the fiend himself.  After a grueling battle, they eventually emerged bloodied and bruised yet victorious.  With the King and Princess rescued and the Golden Axe returned, peace fell on Yuria for a time.  But Tyris Flare would find little comfort in this: only an inexplicable feeling of emptiness and a longing for something she would never feel again.~
+@54   = ~True to his word, <CHARNAME>'s new abilities allowed Tyris Flare to return home mere moments she left.  Resuming their siege of Death Adder's fortress, Tyris and her companions fought their way to his inner sanctum and confronted the fiend himself.  After a grueling battle, they eventually emerged victorious, thanks mostly to Tyris' seemingly newfound abilities.  With the King and Princess rescued and the Golden Axe returned, peace fell on Yuria for a time.  But no peace would be found for Tyris until the day finally came that she gave birth to her daughter.  And as their eyes met, Tyris Flare found a place for all the love she held for the man she would never see again.~
+@55   = ~True to his word, <CHARNAME>'s new abilities allowed Tyris Flare to return home mere moments she left.  Resuming their siege of Death Adder's fortress, Tyris and her companions fought their way to his inner sanctum and confronted the fiend himself.  After a grueling battle, they eventually emerged victorious, thanks mostly to Tyris' seemingly newfound abilities.  With the King and Princess rescued and the Golden Axe returned, peace fell on Yuria for a time.  But Tyris Flare would find little comfort in this: only an emptiness and a longing for the man she would never see again.~
+@56   = ~Abandoned by her lover in a strange new world, Tyris Flare travelled to <CHARNAME>'s childhood home of Candlekeep in the hope of discovering a way of returning home in the city's ancient libraries.  But her studies would be interrupted when the day finally came that she gave birth to her daughter.  And as their eyes met, Tyris found a place for all the love she still held for <CHARNAME>.  Eventually they would travel Toril together, a pair of warrior mages.  Occasionally stories of their exploits would surface in the taverns of Amn, but whether they ever returned to Yuria remains a mystery.~
+@57   = ~Abandoned by her lover in a strange new world, Tyris Flare travelled to <CHARNAME>'s childhood home of Candlekeep in the hope of discovering a way of returning home in the city's ancient libraries.  But instead of knowledge, all she would find was sadness.  Eventually she began to wander Toril, taking on mercenary assignments against impossible odds.  Some wondered if she secretly hoped for death and that in the afterlife she might meet her lover once more.   However, the eventual fate of Tyris Flare remains a mystery.~
+@58   = ~Tyris Flare's Armour
+This tough leather armour was created for Tyris in order to provide protection but not preclude her ability to cast spells.
+
+STATISTICS
+
+Bonuses: Decrease Spell Casting Speed by 1
+Armor Class: 6
+Weight: 15
+Requires: 6 Strength
+
+Not Usable By:
+ Mage
+ Kensai
+ Monk
+ Avenger
+ Shapeshifter~
+@59   = ~Tarik~ 
+@60   = ~Bring me my lover, Tyris.~
+@61   = ~Bring me Tyris, the amazon fighter/mage.~
+@101000 = ~Alternate Portrait 1~
+@101001 = ~NPC is not installed, therefore skipping alternate portraits...~
+@101002 = ~Alternate Tyris Portraits~
+
+@102000 = ~Alternate Portrait 2~
+
+@103000 = ~Alternate Portrait 3~
+
+@104000 = ~Alternate Portrait 4~
+
+@105000 = ~Alternate Portrait 5~
+
+@106000 = ~Alternate Portrait 6~
+
+@107000 = ~Alternate Portrait 7~
+

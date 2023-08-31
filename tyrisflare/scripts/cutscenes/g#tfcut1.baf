@@ -1,0 +1,28 @@
+IF
+  True()
+THEN
+  RESPONSE #1
+    CutSceneID("G#Tyris")
+    SmallWait(2)
+    DisplayStringHead("G#Tyris",~"What the...?"~)
+    EquipMostDamagingMelee()
+    SmallWait(1)
+    Attack("G#TFSkeleton1")
+    ActionOverride("G#TFSkeleton1",Attack("G#Tyris"))
+    ActionOverride("G#TFSkeleton2",Attack("G#Tyris"))
+    //Wait(2)
+    //ActionOverride("G#Tyris",SwingOnce())
+    SmallWait(10)
+    Kill("G#TFSkeleton1")
+    SmallWait(10)
+    Attack("G#TFSkeleton2")
+    //Wait(2)
+    //ActionOverride("G#Tyris",SwingOnce())
+    SmallWait(10)
+    Kill("G#TFSkeleton2")
+    //Wait(2)
+    FaceObject(Player1)
+    EndCutSceneMode()
+    //Wait(1)
+    ActionOverride("G#Tyris",StartDialogueNoSet(Player1))
+END

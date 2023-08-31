@@ -1,0 +1,8 @@
+IF
+  !Global("G#TF.CreatedTyrisSpawn","AR1100",1)
+THEN
+  RESPONSE #1
+    ClearAllActions()
+    SetGlobal("G#TF.CreatedTyrisSpawn","AR1100",1)
+    CreateCreature("G#TFSPWN",[2818.1113],8)
+END

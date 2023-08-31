@@ -1,0 +1,46 @@
+@0    = ~You follow in the hopes of retrieving something dear to you. I say that the longer you keep this up, the more you will lose.~
+@1    = ~Consider young Tyris here.  Wouldn't it be awful if something happened to one of you?~
+@2    = ~I shall not lose <CHARNAME> to an undead creature like you!~
+@3    = ~But I wonder, does he fear your loss?  Pay attention <CHARNAME>.  Follow me further and you will lose more than you can imagine!  Starting now!~
+@4    = ~The Final Battle with Bodhi
+
+Bodhi appeared in an ambush shortly before I reached her haven, warning me that she was aware of my pursuit and stealing from me the one person that is dearest to my heart: Tyris.  Before she vanished and unleashed more of her undead creations upon me, Bodhi warned me that if I continue I will lose even more than I thought possible.  I cannot give up on the Rhynn Lanthorn... but now the life and immortal soul of the one I love is at stake, as well!~
+@5    = ~But... no, I have already prepared much for this meeting, <CHARNAME>. I did warn you that you would suffer great loss if you continued your push towards me.  I did not lie.~
+@6    = ~You have taken too much already!  You will return both Imoen's soul and Tyris!~
+@7    = ~And you have delivered on that promise.  Return Tyris and perhaps I will be merciful.~
+@8    = ~I would have hunted you for your theft of Tyris alone.  She is very important to me.~
+@9    = ~You place too much confidence in sentiment.  The theft of Tyris will not save you.~
+@10   = ~She is lost to you, <CHARNAME>.  Tyris was quite receptive to my discipline.  I doubt your fumbling could have inspired the loyalty I have taken with a bite and a gaze.~
+@11   = ~The Final Battle with Bodhi
+
+Bodhi has turned Tyris into a vampire!  Or... or very nearly.  The process may not have been completed in the short time Bodhi has had her.  Hopefully something can be done or I will have lost her.  Perhaps the elven war sage might know some way of restoration... or Elhan...~
+@12   = ~An interesting ploy, though I am sure her fate will still serve as an example, whether you wish her back or not.~
+@13   = ~Whatever you desire, mistress.~
+@14   = ~Don't you see, <CHARNAME>?  She is not even fully turned and she has betrayed you.  Prepare to die at your lover's hand!~
+@15   = ~Elhan!  I've the half vampire body of Tyris here because of you!  You'll tell me now!~
+@16   = ~A friend is afflicted by vampirism.  An old book suggested that followers of Oghma might know something about that.~
+@17   = ~I'm looking for information about a tome that details the curing of Vampirism.~
+@18   = ~Have you come seeking wisdom from the Binder of What is Known? The Wise God stands ready.~
+@19   = ~No, thank you, I have no need of help at the moment.~
+@20   = ~I lost a loved one in a battle with his sister, Bodhi.  I seek a means of curing her.~
+@21   = ~A loved one was taken by a vampire. What can I expect when I find them?~
+@22   = ~Someone I care about has fallen to a vampire. Is there any way to save them?~
+@23   = ~I can't believe it...~ [g3mute]
+@24   = ~<CHARNAME>, I couldn't stop it.  I tried.  I was screaming to stop myself but I couldn't...~
+@25   = ~It's okay, Tyris.  I know it wasn't you.  I'm just glad to have you back in one piece.~
+@26   = ~The Final Battle with Bodhi
+
+While I had feared for some time that Bodhi's final revenge on me would be to take away Tyris forever, it seems that the information in the lorebook was right...  Amaunator's idol has restored Tyris not only to life, but has removed the vampiric curse from her, as well.~
+@27   = ~If it helps, Bodhi is even more dead than she was before.~
+@28   = ~Let's avoid that happening again, shall we?~
+@29   = ~Thank you, <CHARNAME>, for everything.  Now shall we get out of this place?~
+@30   = ~Sounds like a good idea to me.~
+@31   = ~Actually, I don't have room for you in the party right now.~
+@32   = ~Much appreciated, darling.  I never, ever want to go through something like that again.  Now shall we get out of this place?~
+@33   = ~I'll certainly try my best.  I never, ever want to go through something like that again.  Now shall we get out of this place?~
+@34   = ~I love you, <CHARNAME>.  I hope you know that.~
+@35   = ~Are you serious?!  After everything we've been through and everything you've done to bring me back, you're just going to toss me aside?~
+@36   = ~Kidding!~
+@37   = ~I'm sorry, Tyris.~
+@38   = ~You are a wicked, wicked man, <CHARNAME>.  Count yourself lucky that I love you so much.~
+@39   = ~Then I guess this is goodbye.  Who knows if we'll meet again...~

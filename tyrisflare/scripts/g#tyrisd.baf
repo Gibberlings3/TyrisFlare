@@ -1,0 +1,35 @@
+IF // Trigger dream lovetalks
+  InParty(Myself)
+  RealGlobalTimerExpired("G#TF.TyrisRomance","GLOBAL")
+  OR(2)
+    Global("G#TF.TyrisRomanceActive","GLOBAL",1)
+    Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  Global("G#TF.TyrisMatch","GLOBAL",1)
+  !AreaType(DUNGEON)
+  !AreaCheck("AR1300")
+  See(Player1)
+  !StateCheck("G#Tyris",CD_STATE_NOTVALID)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  !See([ENEMY])
+  CombatCounter(0)
+  OR(4)
+    Global("G#TF.Lovetalk","LOCALS",5) // "Do you still want to hear about my parents?"
+    Global("G#TF.Lovetalk","LOCALS",17) // "Why don't you talk about your old companions?"
+    Global("G#TF.Lovetalk","LOCALS",33) // "Aches and pains"
+    Global("G#TF.Lovetalk","LOCALS",37) // "A bit of fun..."
+THEN
+  RESPONSE #1
+    IncrementGlobal("G#TF.Lovetalk","LOCALS",1)
+    PlaySong(0)
+    PlaySound("G#TFSONG")
+    Interact(Player1)
+END
+
+IF // If you've said you'll sleep with her, change the variable so you now have
+  InParty(Myself)
+  !StateCheck("G#Tyris",CD_STATE_NOTVALID)
+  Global("G#TF.SleptWithTyris","GLOBAL",2)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.SleptWithTyris","GLOBAL",1)
+END

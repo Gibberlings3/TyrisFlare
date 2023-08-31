@@ -1,0 +1,32 @@
+IF
+	Global("CleanseVampire","AR1401",2)
+	Global("G#TF.TyrisVampire","GLOBAL",3)
+	Name("G#Tyris",Myself)
+	AreaCheck("AR1401")
+THEN
+	RESPONSE #1
+		SetGlobal("G#TF.TyrisVampire","GLOBAL",4)
+		DialogInterrupt(TRUE)
+		ChangeAIScript("G#Tyris",OVERRIDE)
+END
+
+IF
+	Global("G#TF.TyrisVampire","GLOBAL",1)
+	Global("RomanceVampire","GLOBAL",0)
+THEN
+	RESPONSE #1
+		SetGlobal("RomanceVampire","GLOBAL",1)
+		Continue()
+END
+
+IF
+	Global("G#TF.TyrisVampire","GLOBAL",1)
+	Global("RomanceVampire","GLOBAL",1)
+	Global("RomanceVampireTeleport","GLOBAL",0)
+THEN
+	RESPONSE #1
+		SetGlobal("RomanceVampireTeleport","GLOBAL",1)
+		CreateVisualEffectObject("SPDIMNDR",Myself)
+		Wait(2)
+		DestroySelf()
+END

@@ -1,0 +1,59 @@
+IF
+  Global("G#TF.TyrisMatch","GLOBAL",0)
+  Global("G#TF.CheckTyrisMatch","GLOBAL",0)
+  Gender(Player1,MALE)
+  OR(3)
+    Race(Player1,HUMAN)
+    Race(Player1,HALF_ELF)
+    Race(Player1,ELF)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.CheckTyrisMatch","GLOBAL",1)
+    SetGlobal("G#TF.TyrisMatch","GLOBAL",1)
+END
+
+IF
+  Global("G#TF.TyrisMatch","GLOBAL",0)
+  Global("G#TF.CheckTyrisMatch","GLOBAL",0)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.CheckTyrisMatch","GLOBAL",1)
+END
+
+IF
+  InParty("G#Tyris")
+  Global("DROWITEMCHECKDONE","GLOBAL",1)
+  Global("G#TF.TyrisDrowCheck","GLOBAL",0)
+THEN
+  RESPONSE #1
+    SetInterrupt(FALSE)
+    MultiPlayerSync()
+    SmallWait(8)
+    ActionOverride("G#Tyris",ApplySpell(Myself,UNDER_NORM))
+    SetGlobal("G#TF.TyrisDrowCheck","GLOBAL",1)
+    TakePartyItemAll("DWCHAN01")
+    TakePartyItemAll("DWCHAN02")
+    TakePartyItemAll("DWSW1H01")
+    TakePartyItemAll("DWSW1H02")
+    TakePartyItemAll("DWBLUN01")
+    TakePartyItemAll("DWHALB01")
+    TakePartyItemAll("DWSPER01")
+    TakePartyItemAll("DWXBOW01")
+    TakePartyItemAll("DWSHLD01")
+    TakePartyItemAll("DWCLCK01")
+    TakePartyItemAll("DWBOLT01")
+    TakePartyItemAll("DWBOLT02")
+    TakePartyItemAll("DWBOLT03")
+    TakePartyItemAll("DWPLAT01")
+    TakePartyItemAll("MISC9W")
+    SetInterrupt(TRUE)
+END
+
+IF
+  !InParty("G#Tyris")
+  !Dead("G#Tyris")
+  Global("G#TF.TyrisDrowCheck","GLOBAL",1)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.TyrisDrowCheck","GLOBAL",0)
+END

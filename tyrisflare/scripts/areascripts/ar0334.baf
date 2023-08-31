@@ -1,0 +1,12 @@
+IF
+  Global("G#TF.UpgradeArmour","GLOBAL",1)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.UpgradeArmour","GLOBAL",0)
+    TakePartyItem("G#TFARMR")
+    DestroyItem("G#TFARMR")
+    GiveItemCreate("G#TFAMR2","G#Tyris",0,0,0)  
+    SetGlobal("ForgeItem","GLOBAL",99999) 
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END

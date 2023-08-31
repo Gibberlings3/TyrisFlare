@@ -1,0 +1,12 @@
+IF
+  InParty("G#Tyris")
+  !StateCheck("G#Tyris",CD_STATE_NOTVALID)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  Global("DemonHeartTrigger","AR0413",1)
+  Global("ToldDemonsHeart","GLOBAL",1)
+  Global("G#TF.PlanarSphereCore","AR0413",0)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.PlanarSphereCore","AR0413",1)
+    ActionOverride("G#Tyris",StartDialogueNoSet(Player1))
+END

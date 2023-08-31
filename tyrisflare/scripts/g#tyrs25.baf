@@ -1,0 +1,183 @@
+IF // If summoned, she starts her summoning talk
+  Global("G#TF.TyrisSummoned","GLOBAL",1)
+THEN
+  RESPONSE #1
+    StartDialogueNoSet([PC])
+END
+
+IF // If a non-serious romance was leftover from SoA, kill it
+  InParty(Myself)
+  Global("G#TF.TyrisRomanceActive","GLOBAL",1)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.TyrisRomanceActive","GLOBAL",3)
+END
+
+IF // Starts the ToB section of Tyris' romance
+  InParty(Myself)
+  Global("G#TF.ExpLovetalk","LOCALS",0)
+  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.ExpLoveTalk","LOCALS",1)
+    RealSetGlobalTimer("G#TF.TyrisRomance","GLOBAL",1800)
+END
+
+IF // Trigger lovetalks
+  InParty(Myself)
+  RealGlobalTimerExpired("G#TF.TyrisRomance","GLOBAL")
+  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  Global("G#TF.TyrisMatch","GLOBAL",1)
+  !AreaType(DUNGEON)
+  See(Player1)
+  !StateCheck("G#Tyris",CD_STATE_NOTVALID)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  !See([ENEMY])
+  !Range([NEUTRAL],10)
+  CombatCounter(0)
+  OR(2)
+    Global("G#TF.ExpLovetalk","LOCALS",1) // "It felt like we'd settled down"
+    Global("G#TF.ExpLovetalk","LOCALS",13) // "Do you ever think about the day we first met?"
+THEN
+  RESPONSE #1
+    IncrementGlobal("G#TF.ExpLovetalk","LOCALS",1)
+    PlaySong(0)
+    PlaySound("G#TFSONG")
+    Interact(Player1)
+END
+
+IF // Trigger "morning after" lovetalks
+  InParty(Myself)
+  PartyRested()
+  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  Global("G#TF.ExpLovetalk","LOCALS",9) // "My love, before we get going..."
+THEN
+  RESPONSE #1
+    IncrementGlobal("G#TF.ExpLovetalk","LOCALS",1)
+    PlaySong(0)
+    PlaySound("G#TFSONG")
+    Interact(Player1)
+END
+
+IF // Trigger Post-Master Wraith lovetalk
+  GlobalGT("WraithPunish","GLOBAL",0)
+  Global("G#TF.LovedOne","GLOBAL",1)
+  GlobalLT("G#TF.ExpLovetalk","LOCALS",4) // "I can't believe what that monster said..."
+  InParty(Myself)
+  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  CombatCounter(0)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.ExpLovetalk","LOCALS",4)
+    PlaySong(0)
+    PlaySound("G#TFSONG")
+    Interact(Player1)
+END
+
+IF // Trigger "desert" lovetalk
+  InParty(Myself)
+  RealGlobalTimerExpired("G#TF.TyrisRomance","GLOBAL")
+  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  Global("G#TF.TyrisMatch","GLOBAL",1)
+  See(Player1)
+  !StateCheck("G#Tyris",CD_STATE_NOTVALID)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  !See([ENEMY])
+  !Range([NEUTRAL],10)
+  CombatCounter(0)
+  Global("G#TF.ExpLovetalk","LOCALS",11) // "Just feel the air..."
+  OR(4)
+    AreaCheck("AR5500") // Amkethran
+    AreaCheck("AR5200") // Marching Mountains
+    AreaCheck("AR6300") // Oasis
+    AreaCheck("AR6000") // Abazigal's Lair
+THEN
+  RESPONSE #1
+    IncrementGlobal("G#TF.ExpLovetalk","LOCALS",1)
+    PlaySong(0)
+    PlaySound("G#TFSONG")
+    Interact(Player1)
+END
+
+IF // Trigger final lovetalk
+  Global("ChallengesDone","GLOBAL",1)
+  GlobalLT("G#TF.ExpLoveTalk","LOCALS",16) // "This is it, isn't it?"
+  InParty(Myself)
+  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  See(Player1)
+  CombatCounter(0)
+THEN
+  RESPONSE #1
+    IncrementGlobal("G#TF.ExpLovetalk","LOCALS",1)
+    PlaySong(0)
+    PlaySound("G#TFSONG")
+    Interact(Player1)
+END
+
+IF // Non-romance version of asking a big favour
+  Global("ChallengesDone","GLOBAL",1)
+  Global("G#TF.AskingTheBigFavour","GLOBAL",0)
+  InParty(Myself)
+  !Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  See(Player1)
+  CombatCounter(0)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.AskingTheBigFavour","GLOBAL",1)
+    StartDialogueNoSet(Player1)
+END
+
+IF // Start timer for first Tyris-initiated flirt
+  InParty(Myself)
+  Global("G#TF.StartTyrisExpFlirts","LOCALS",0)
+  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  GlobalGT("G#TF.ExpLovetalk","LOCALS",0)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.StartTyrisExpFlirts","LOCALS",1)
+    RealSetGlobalTimer("G#TF.TyrisFlirt","LOCALS",900)
+END
+
+IF // Trigger Tyris-initiated flirts
+  InParty(Myself)
+  See(Player1)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  !StateCheck("G#Tyris",CD_STATE_NOTVALID)
+  CombatCounter(0)
+  RealGlobalTimerExpired("G#TF.TyrisFlirt","LOCALS")
+  Global("G#TF.TyrisFlirtNow","LOCALS",0)
+  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+  GlobalGT("G#TF.ExpLovetalk","LOCALS",0)
+  !Global("G#TF.ExpLovetalk","LOCALS",5)
+  !Global("G#TF.ExpLovetalk","LOCALS",9)
+  !AreaCheck("AR6200")
+  !AreaCheck("OH4230")
+  !AreaCheck("OH5500")
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.TyrisFlirtNow","LOCALS",1)
+    StartDialogueNoSet(Player1)
+    Wait(1)
+END
+
+IF // Draconis death comment
+  InParty(Myself)
+  See(Player1)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  !StateCheck("G#Tyris",CD_STATE_NOTVALID)
+  Dead("Bazdra02")
+  Global("G#TF.TyrisDraconisComment","GLOBAL",0)
+THEN
+  RESPONSE #1
+    SetGlobal("G#TF.TyrisDraconisComment","GLOBAL",1)
+    StartDialogueNoSet(Player1)
+END
+
+IF // Trigger string fixer
+  HotKey(F)
+THEN
+  RESPONSE #1
+    ClearActions("G#Tyris")
+    StartCutSceneMode()
+    StartCutScene("G#FIX")
+END

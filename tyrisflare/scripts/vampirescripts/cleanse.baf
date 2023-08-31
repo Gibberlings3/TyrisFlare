@@ -1,0 +1,17 @@
+IF
+	Contains("G#TFBODY",Myself)
+	Contains("miscbp",Myself)
+THEN
+	RESPONSE #1
+		SetInterrupt(FALSE)
+		SetGlobal("CleanseVampire","AR1401",2)
+		DestroyItem("G#TFBODY")
+		DestroyItem("miscbp")
+		CreateVisualEffect("SPMETSW2",[2592.1701])
+		CreateVisualEffect("SPMETSW2",[2645.1742])
+		Wait(1)
+		CreateVisualEffect("SPFLESHS",[2565.1677])
+		Wait(1)
+		MoveGlobal("AR1401","G#Tyris",[2565.1677])
+		SetInterrupt(TRUE)
+END
