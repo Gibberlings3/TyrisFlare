@@ -1,0 +1,130 @@
+
+@2    = ~Mais pourquoi tous les grands événements de ma vie impliquent-ils donc que je me retrouve téléportée contre ma volonté ? Cette fois je sais au moins qui en est responsable, à défaut de savoir pourquoi.~ [g#trsx17]
+
+@3    = ~<CHARNAME>, pourrais-tu donc m'expliquer ce qui se passe ?~
+
+@4    = ~C'est bon de te revoir Tyris.~
+
+@5    = ~Tyris, j'ai besoin de ton aide.~
+
+@6    = ~Bienvenue dans mon petit chez-moi sur les Abysses. Qu'en penses-tu ?~
+
+@7    = ~Honnêtement ? J'ai juste eu envie de t'embêter un peu, c'est tout.~
+
+@8    = ~De même. Mais je te fais remarquer que ceci ne répond pas à ma question.~
+
+@9    = ~J'ai besoin de ton aide.~
+
+@10   = ~Eh bien je viens juste de te téléporter dans mon petit chez-moi sur les Abysses. Qu'en penses-tu ?~
+
+@11   = ~Je serais très heureuse de t'aider, mais notre marché ne change pas : mon bras armé en échange d'une solution pour rentrer chez moi.~
+
+@12   = ~Hummm... ce nouveau pouvoir de téléportation que tu viens de me montrer pourrait bien être la solution. Sais-tu comment il fonctionne ?~
+
+@13   = ~J'ai bien peur que non. Il m'a juste fait comprendre que je pouvais convoquer ici les gens "dont le destin est lié au mien".~
+
+@14   = ~Absolument pas. Désolé !~ ~Absolument pas. Désolée !~
+@15   = ~Ecoute, je n'ai pas de temps à perdre avec tes problèmes. J'ai des choses plus importantes à accomplir.~
+
+@16   = ~Il a l'air... pas naturel, presque démoniaque. Donc pourquoi exactement m'as-tu convoquée dans un si étrange endroit ?~
+
+@17   = ~<CHARNAME>, tu es la personne la plus irresponsable que j'ai jamais rencontrée !~
+
+@18   = ~Pfff, si tu as besoin de mon aide, il va d'abord falloir que tu me fasses des excuses...~
+
+@19   = ~Intéressant. Peut-être en apprendras-tu davantage au fil du temps. Mais d'une certaine manière, j'ai bien l'impression que *ceci* est la réponse à mon problème.~
+
+@20   = ~Nous sommes donc d'accord ?~
+
+@21   = ~Pour sûr.~
+
+@22   = ~Oui, mais je n'ai pas besoin de ton aide maintenant. Mais je reviendrai bientôt.~
+
+@23   = ~Hors de question ! Je ne vais pas gaspiller mon pouvoir pour tes problèmes. J'ai des choses plus importantes à accomplir.~
+
+@24   = ~Eh bien peut-être en apprendras-tu davantage au fil du temps. Mais d'une certaine manière, j'ai bien l'impression que *ceci* est la réponse à mon problème.~
+
+@25   = ~Dans ce cas n'espère pas la moindre aide de ma part, <CHARNAME>.~
+
+@26   = ~Et si tu changes d'avis et décides de t'excuser, eh bien j'explorerai cet endroit étrange où tu m'as amenée...~
+
+@27   = ~Dans ce cas, en route !~
+
+@28   = ~J'espère que ce ne sera pas trop long, <CHARNAME>.~
+
+@29   = ~Veux-tu bien m'expliquer qu'est-ce que tu avais de si urgent à faire pour m'abandonner comme cela à Suldan-  Par les dents de Guld, où m'as-tu donc amenée, mon chéri ?~ [g#trsx18]
+
+@30   = ~Honnêtement ? Aucune idée. Je suppose que cet endroit fait partie du domaine de mon père, mais il est... étrange.~
+@31   = ~Dans mon petit chez-moi sur les Abysses. Qu'en penses-tu ?~
+
+@32   = ~Misère ! Ce n'est pas *toi* que je voulais convoquer !~
+
+@33   = ~On peut le dire, mon chéri. Ce n'est pas exactement l'endroit que j'avais en tête pour me fixer...~
+
+@34   = ~Mais peu importe, je suppose que cela signifie que nous allons à nouveau voyager ensemble ?~
+
+@35   = ~Evidemment. Je n'envisageais pas les choses autrement.~
+
+@36   = ~En fait ma chérie, j'ai besoin que tu attendes ici un petit moment.~
+
+@37   = ~C'est tellement... étrange, si peu naturel. Ce n'est pas exactement l'endroit que j'avais en tête pour me fixer...~
+
+@38   = ~Qu'est-ce que cela veut dire exactement ?!~
+
+@39   = ~C'était juste une blague !~
+
+@40   = ~D'accord, je me suis mal exprimé...~
+
+@41   = ~Cela veut dire que j'essaie de me débarrasser de toi, femme pénible !~
+
+@42   = ~Moi non plus. Viens mon chéri, voyons ce que les dieux te réservent aujourd'hui...~
+
+@43   = ~Si c'est ce que tu veux mon chéri, d'accord. Mais ne crois pas que tu vas prendre l'habitude de ce genre de chose. Tyris Flare n'est pas une femme au foyer !~
+
+@44   = ~Sérieusement mon amour, ne traîne pas.~
+
+@45   = ~Je vois que ton sens de l'humour est toujours aussi particulier, mon chéri.~
+
+@46   = ~Veux-tu donc bien expliquer à ta chérie dans quel genre d'endroit tu l'as amenée ?~
+
+@47   = ~Mais que voulais-tu dire alors ? Peu importe. Je suis heureuse de te revoir, <CHARNAME>.~
+
+@48   = ~Bâtard ! Comment peux-tu... Après tout ce que nous avons traversé ensemble ?~
+
+@49   = ~Tu es vraiment impossible...~
+
+@50   = ~Le moment est donc venu ? As-tu besoin de mon aide ?~ [g#trsx19]
+
+@51   = ~J'ai peur que non, je ne faisais que passer.~
+
+@52   = ~Heureuse de l'entendre. En route.~
+
+@53   = ~Tant pis. J'espère seulement que tu ne vas pas me faire attendre trop longtemps. Cet enfoiré de diablotin me tape sur les nerfs !~
+
+@54   = ~Tant pis. J'espère seulement que tu ne vas pas me faire attendre trop longtemps. Cet endroit où tu m'as amenée est... bizarre.~
+
+@55   = ~J'espère que tu arrives avec des excuses, ou alors cette conversation va mal se terminer.~ [g#trsx20]
+
+@56   = ~Désolé d'avoir été mesquin avec toi avant. J'ai vraiment besoin de ton aide.~
+
+@57   = ~Ecoute Tyris, je suis désolé de m'être emporté. Tu ne croirais pas tous les évènements qui me sont arrivés récemment...~
+
+@58   = ~Pas du tout ! Je suis juste passé pour te narguer un peu.~
+
+@59   = ~Excuses acceptées. Et je suis contente de voir que tu es capable de reconnaître le talent quand tu l'as en face de toi. Veux-tu donc que je rejoigne ton groupe ?~
+
+@60   = ~En fait, j'ai besoin que tu attendes ici encore un petit peu. Mais je reviendrai bientôt te chercher.~
+
+@61   = ~Excuses acceptées. Veux-tu donc que je rejoigne ton groupe ?~
+
+@62   = ~Ordure.~
+
+@63   = ~C'est bon de te revoir, mon chéri. Le moment est-il venu de filer d'ici ?~ [g#trsx21]
+
+@64   = ~Absolument. Désolé de t'avoir fait attendre si longtemps, mon amour.~
+
+@65   = ~Il va falloir attendre juste un petit peu plus, ma chérie.~
+
+@66   = ~Inutile de t'excuser. Je suis heureuse que nous soyons à nouveau réunis.~
+
+@67   = ~Pas longtemps je l'espère. Tu ne vas pas te débarrasser de moi si facilement, mon chéri.~

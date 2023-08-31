@@ -1,0 +1,44 @@
+// Overridden lines in Enhanced Edition
+@41   = ~Cette robuste armure de cuir fut façonnée pour Tyris dans le but de lui offrir une protection, tout en ne l'empêchant pas de lancer des sorts. Elle a récemment été retravaillée par Cromwell le forgeron, qui lui a apporté quelques améliorations.
+
+PARAMETRES :
+
+Capacités d'équipement :
+– Lancer des sorts reste possible
+– Temps d'incantation réduit de 1
+– Résistance au feu : +50%
+
+Classe d'Armure : 5 (3 contre les armes tranchantes, 4 contre les armes perforantes et les projectiles)
+Force nécessaire : 6
+
+Poids : 15
+~
+@43   = ~Tyris a été capturée par Bodhi et a été infectée par le vampirisme, vous obligeant à la tuer. Il y a peut-être un moyen de la ramener à la vie, même si vous ne voyez absolument pas comment.
+
+PARAMETRES :
+
+Poids : 135
+~
+@45   = ~Un cadeau de Tyris, pour que vous vous souveniez d'elle si jamais vous deviez être séparés.
+
+PARAMETRES :
+
+Poids : 1
+~
+// 46 & 48 just done for "Faerûn"
+@46   = ~Avec la destruction du trône de Bhaal et la fin de la quête de <CHARNAME>, Tyris put enfin concentrer ses efforts pour trouver un moyen de rentrer dans son monde, accompagnée d'un <CHARNAME> très motivé pour l'aider dans sa tâche. Pendant des années elle parcourut Féérune, cherchant mages et autres arpenteurs de plans, mais sans succès. Et puis un jour, sans but précis, elle revint dans les collines d'Umar et y trouva une affiche d'avis de recherche portant son nom et sa description. Intriguée, Tyris remonta la piste jusqu'à une taverne proche où elle découvrit deux clients bien particuliers : un nain à l'air familier et un barbare en possession d'une rune de transport ainsi qu'une hache d'or. Ayant enfin retrouvé ses compagnons après plus de cinq ans d'errance, <CHARNAME> et Tyris Flare se séparèrent et elle put enfin rentrer dans son monde.~
+@48   = ~Avec la destruction du trône de Bhaal et l'ascension à la divinité de <CHARNAME>, Tyris put enfin concentrer ses efforts pour trouver un moyen de rentrer dans son monde. Pendant des années elle parcourut Féérune, cherchant mages et autres arpenteurs de plans, mais sans succès. Et puis un jour, sans but précis, elle revint dans les collines d'Umar et y trouva une affiche d'avis de recherche portant son nom et sa description. Intriguée, Tyris remonta la piste jusqu'à une taverne proche où elle découvrit deux clients bien particuliers : un nain à l'air familier et un barbare en possession d'une rune de transport ainsi qu'une hache d'or. Ayant enfin retrouvé ses compagnons après plus de cinq ans d'errance, Tyris Flare put enfin rentrer dans son monde.~
+
+@58   = ~Cette robuste armure de cuir fut façonnée pour Tyris dans le but de lui offrir une protection, tout en ne l'empêchant pas de lancer des sorts.
+
+PARAMETRES :
+
+Capacités d'équipement :
+– Lancer des sorts reste possible
+– Temps d'incantation réduit de 1
+
+Classe d'Armure : 6 (4 contre les armes tranchantes, 5 contre les armes perforantes et les projectiles)
+Force nécessaire : 6
+
+Poids : 15
+~

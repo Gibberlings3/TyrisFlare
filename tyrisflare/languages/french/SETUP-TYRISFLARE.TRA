@@ -1,0 +1,115 @@
+@0    = ~Tyris Flare NPC~
+@1    = ~Tyris~
+@2    = ~Reculez ! Reculez !~ [g#tyrs01]
+@3    = ~Je suis heureuse d'avoir pu rejoindre ton groupe. Nous avons accompli de grandes choses ensemble.~ [g#tyrs02]
+@4    = ~Les actes valent mieux que les mots, mon ami. Et tes actes ne sont guère héroïques.~ [g#tyrs03]
+@5    = ~Ce groupe commence à m'inquiéter. J'espère qu'en le rejoignant je n'ai pas fait le mauvais choix.~ [g#tyrs04]
+@6    = ~Je ne tolérerai plus votre comportement ! Vous êtes peut-être mon seul espoir de rentrer dans mon monde, mais je ne suivrai pas ce chemin sanglant pour y arriver.~ [g#tyrs05]
+@7    = ~Qu'il en soit ainsi. Je ferai de mon mieux à ta place.~ [g#tyrs06]
+@8    = ~Je continuerai aussi longtemps que nécessaire, mais un peu de repos serait le bienvenu.~ [g#tyrs07]
+@9    = ~Par le souffle de la Gorgone, il doit bien y avoir quelque chose de mieux à faire !~ [g#tyrs08]
+@10   = ~Vas-y !~ [g#tyrs09]
+@11   = ~Tu vas mourir de ma main !~ [g#tyrs10]
+@12   = ~Tu vas brûler, monstre !~ [g#tyrs11]
+@13   = ~~ [g#tyrs12]
+@14   = ~~ [g#tyrs13]
+@15   = ~J'ai besoin d'aide !~ [g#tyrs14]
+@16   = ~Cela me rappelle presque mon monde...~ [g#tyrs15]
+@17   = ~Je ne me suis jamais sentie à l'aise dans les villes. Je crois que je suis née pour faire la route.~ [g#tyrs16]
+@18   = ~Restez sur vos gardes et surveillez où vous mettez les pieds. Une attaque pourrait venir de n'importe où.~ [g#tyrs17]
+@19   = ~Ah, je préfère cela. La sensation du soleil sur ma peau me rend toute... Oh, peu importe.~ [g#tyrs18]
+@20   = ~Je comprends qu'il faille continuer à avancer, mais voyager de nuit nous expose beaucoup plus.~ [g#tyrs19]
+@21   = ~Oui ?~ [g#tyrs20]
+@22   = ~Je suis prête.~ [g#tyrs21]
+@23   = ~Que puis-je faire pour toi ?~ [g#tyrs22]
+@24   = ~Qu'est-ce que c'est ?~ [g#tyrs23]
+@25   = ~Est-ce le moment ?~ [g#tyrs24]
+@26   = ~Très bien.~ [g#tyrs25]
+@27   = ~A tes ordres.~ [g#tyrs26]
+@28   = ~Si c'est ce que tu veux.~ [g#tyrs27]
+@29   = ~Faisons-le.~ [g#tyrs28]
+@30   = ~Bon, d'accord.~ [g#tyrs29]
+@31   = ~Bien. Continuons.~ [g#tyrs30]
+@32   = ~Oui je t'écoute. Maintenant arrête de m'embêter!~ [g#tyrs31]
+@33   = ~Un coup de plus et tu goûteras l'acier trempé ou le feu arcanique. Peut-être même les deux.~ [g#tyrs32]
+@34   = ~Meurs, fiélon !~ [g#tyrs33]
+@35   = ~Qu'est-ce que...?~ [g#tyrs34]
+@36   = ~Par le sang du démon, ce bâtard ne va donc jamais s'effondrer ?!~ [g#tyrs35]
+@37   = ~Mais où veux-tu exactement que je range tout cela ?~ [g#tyrs36]
+@38   = ~Par les dents de Guld !~ [g#tyrs37]
+@39   = ~Lorsque vous lui demandez de parler de sa vie avant de vous rencontrer, Tyris semble hésiter. Si vous insistez, elle vous raconte qu'elle a grandi dans un petit village à la lisière d'une grande jungle. Ses parents lui ont enseigné des techniques de combat et de survie et le chamane du village lui a enseigné les voies des arcanes. Un jour, elle est rentrée chez elle et a trouvé ses parents assassinés, apparemment par le maléfique "Death Adder", mais elle se refuse à vous donner plus de détails. Elle a rapidement quitté le village et a rencontré un groupe d'aventuriers partageant le mêmes objectif : se venger de Death Adder. Et c'est pendant l'attaque du château de Death Adder qu'elle a été téléportée sur Toril.~
+@40   = ~Armure de Tyris Flare~
+@41   = ~Armure de Tyris Flare
+Cette solide armure de cuir a été créée pour Tyris afin de la protéger sans pour autant l'empêcher de lancer des sorts. Elle a récemment été réparée par Cromwell le forgeron, qui y a apporté quelques améliorations dont il a le secret.
+
+PARAMETRES
+
+Capacités d'équipement :
+-1 au temps d'incantation des sorts
++50% de résistance au feu
+
+CA : 5
+Poids : 15
+Force nécessaire : 6
+
+Non utilisable par :
+ Mage
+ Kensai
+ Moine
+ Justicier
+ Métamorphe~
+@42   = ~Corps de Tyris~
+@43   = ~Tyris a été capturée par Bodhi et infectée par le vampirisme, vous obligeant à la tuer. Il y a peut-être un moyen de la rappeler à la vie, mais vous ignorez lequel.~
+@44   = ~Mèche de cheveux de Tyris~
+@45   = ~Un cadeau de Tyris, pour que vous vous souveniez d'elle si vous veniez à être séparés.~
+@46   = ~Avec la destruction du Trône de Bhaal et la fin de la quête de <CHARNAME>, Tyris put concentrer ses efforts à rechercher un moyen de rentrer dans son monde, tâche pour laquelle <CHARNAME> était plus que désireux de l'aider. Pendant des années elle parcourut Féérune, à la recherche de mages et de voyageurs planaires, mais sans succès. Puis un jour, sans but particulier, elle retourna dans les collines d'Umar, où elle trouva un avis de recherche portant son nom et sa description. Intriguée, Tyris chercha l'origine de l'affiche et se retrouva dans une taverne avoisinante ; parmi les clients, s'y trouvaient un nain à l'air familier et un barbare portant une pierre runique de transport et une Hache d'Or. Ayant retrouvé ses anciens compagnons après cinq ans et demi d'exil, <CHARNAME> et Tyris Flare se quittèrent et elle retourna finalement dans son monde.~
+@47   = ~Fidèle à sa parole, les nouveaux pouvoirs de <CHARNAME> permirent à Tyris Flare de rentrer dans son monde quelques instants après son départ. Reprenant le siège de la forteresse de Death Adder, Tyris et ses compagnons se frayèrent un chemin jusqu'à son sanctuaire et affrontèrent le fiélon en personne. Après une bataille éreintante ils en sortirent victorieux, surtout grâce aux capacités apparemment nouvelles de Tyris. Une fois le roi et la princesse sauvés et la hache d'or restituée, la paix régna sur Yuria pendant un long moment. Jusqu'à ce que le guerrier antique Guld le Noir réapparaisse et sème à nouveau la désolation. Mais ceci est une autre histoire...~
+@48   = ~Avec la destruction du Trône de Bhaal et l'ascension à la divinité de <CHARNAME>, Tyris put concentrer ses efforts à rechercher un moyen de rentrer dans son monde. Pendant des années elle parcourut Féérune, à la recherche de mages et de voyageurs planaires, mais sans succès. Puis un jour, sans but particulier, elle retourna dans les collines d'Umar, où elle trouva un avis de recherche portant son nom et sa description. Intriguée, Tyris chercha l'origine de l'affiche et se retrouva dans une taverne avoisinante ; parmi les clients, s'y trouvaient un nain à l'air familier et un barbare portant une pierre runique de transport et une Hache d'Or. Ayant retrouvé ses anciens compagnons après cinq ans et demi d'exil, Tyris Flare retourna finalement dans son monde.~
+@49   = ~Avec la destruction du Trône de Bhaal, Tyris et <CHARNAME> sillonnèrent la Côte des Epées pendant plusieurs mois, évitant tous deux la conversation qu'ils savaient pourtant incontournable. Peut-être par chance, ou grâce au destin, ils arrivèrent finalement à Château-Suif, foyer de <CHARNAME> dans son enfance. C'est là que Tyris donna naissance à une fille. C'est à ce moment-là qu'ils décidèrent de trouver un moyen de retourner à Yuria ensemble. Ainsi, cinq ans plus tard, Tyris Flare retourna finalement dans son monde accompagnée de son mari et d'un enfant.~
+@50   = ~Avec la destruction du Trône de Bhaal, Tyris et <CHARNAME> sillonnèrent la Côte des Epées pendant plusieurs mois, évitant tous deux la conversation qu'ils savaient pourtant incontournable. Peut-être par chance, ou grâce au destin, ils arrivèrent finalement à Château-Suif, foyer de <CHARNAME> dans son enfance. Et une nuit, ne pouvant plus éviter cette nécessaire discussion, ils prirent la décision de trouver un moyen de retourner à Yuria ensemble. Ainsi, cinq ans plus tard, Tyris Flare retourna finalement dans son monde accompagnée de son mari.~
+@51   = ~Avec la destruction du Trône de Bhaal, Tyris et <CHARNAME> sillonnèrent la Côte des Epées pendant plusieurs mois, évitant tous deux la conversation qu'ils savaient pourtant incontournable. Peut-être par chance, ou grâce au destin, ils arrivèrent finalement à Château-Suif, foyer de <CHARNAME> dans son enfance. Et une nuit, ne pouvant plus éviter cette nécessaire discussion, ils prirent la décision de trouver un moyen de retourner à Yuria ensemble. Mais ce ne fut pas la seule décision qu'ils prirent, car ils savaient tous deux qu'il y avait une autre choix à faire pour lequel ils n'avaient que trop attendu. Ainsi, cinq ans plus tard, Tyris Flare retourna finalement dans son monde accompagnée de son mari... et d'un enfant.~
+@52   = ~Tout comme la vie peut être créée, elle peut aussi être détruite. Fidèle à sa parole, les nouveaux pouvoirs de <CHARNAME> permirent à Tyris Flare de rentrer dans son monde quelques instants après son départ mais sans aucun souvenir des événements qui s'étaient déroulés ni aucune trace de l'enfant qu'ils avaient conçu. Reprenant le siège de la forteresse de Death Adder, Tyris et ses compagnons se frayèrent un chemin jusqu'à son sanctuaire et affrontèrent le fiélon en personne. Après une bataille éreintante, ils en ressortirent ensanglantés et meurtris mais victorieux. Une fois le roi et la princesse sauvés et la hache d'or restituée, la paix régna sur Yuria pendant un long moment. Ceci n'apporta cependant que peu de réconfort à Tyris Flare, mais plutôt un sentiment inexplicable de vide et une envie de quelque chose qu'elle ne ressentirait plus jamais.~
+@53   = ~Fidèle à sa parole, les nouveaux pouvoirs de <CHARNAME> permirent à Tyris Flare de rentrer dans son monde quelques instants après son départ mais sans aucun souvenir des événements qui s'étaient déroulés. Reprenant le siège de la forteresse de Death Adder, Tyris et ses compagnons se frayèrent un chemin jusqu'à son sanctuaire et affrontèrent le fiélon en personne. Après une bataille éreintante, ils en ressortirent ensanglantés et meurtris mais victorieux. Une fois le roi et la princesse sauvés et la hache d'or restituée, la paix régna sur Yuria pendant un long moment. Ceci n'apporta cependant que peu de réconfort à Tyris Flare, mais plutôt un sentiment inexplicable de vide et une envie de quelque chose qu'elle ne ressentirait plus jamais.~
+@54   = ~Fidèle à sa parole, les nouveaux pouvoirs de <CHARNAME> permirent à Tyris Flare de rentrer dans son monde quelques instants après son départ. Reprenant le siège de la forteresse de Death Adder, Tyris et ses compagnons se frayèrent un chemin jusqu'à son sanctuaire et affrontèrent le fiélon en personne. Après une bataille éreintante ils en sortirent victorieux, surtout grâce aux capacités apparemment nouvelles de Tyris. Une fois le roi et la princesse sauvés et la hache d'or restituée, la paix régna sur Yuria pendant un long moment. Mais Tyris ne trouva la paix que le jour où elle donna naissance à sa fille. Et quand leurs regards se croisèrent pour la première fois, Tyris Flare reporta sur elle tout l'amour qu'elle portait à cet homme qu'elle ne reverrait plus jamais.~
+@55   = ~Fidèle à sa parole, les nouveaux pouvoirs de <CHARNAME> permirent à Tyris Flare de rentrer dans son monde quelques instants après son départ. Reprenant le siège de la forteresse de Death Adder, Tyris et ses compagnons se frayèrent un chemin jusqu'à son sanctuaire et affrontèrent le fiélon en personne. Après une bataille éreintante ils en sortirent victorieux, surtout grâce aux capacités apparemment nouvelles de Tyris. Une fois le roi et la princesse sauvés et la hache d'or restituée, la paix régna sur Yuria pendant un long moment. Ceci n'apporta cependant que peu de réconfort à Tyris Flare, mais plutôt un sentiment inexplicable de vide et la nostalgie d'un homme qu'elle ne reverrait plus jamais.~
+@56   = ~Abandonnée par son amant dans un monde qui lui était étranger, Tyris Flare se rendit à Château-Suif, foyer de <CHARNAME> dans son enfance, dans l'espoir de découvrir dans les anciennes bibliothèques de la ville un moyen de rentrer chez elle. Mais ses études furent interrompues le jour où elle finit par donner naissance à sa fille. Et quand leurs regards se croisèrent pour la première fois, Tyris Flare reporta sur elle tout l'amour qu'elle portait à <CHARNAME>. Elles finirent par parcourir Toril ensemble, toutes deux guerrières mages. De temps en temps on conte des récits de leurs exploits dans les tavernes en Amn, mais absolument personne ne sait si elles ont fini par retourner à Yuria.~
+@57   = ~Abandonnée par son amant dans un monde qui lui était étranger, Tyris Flare se rendit à Château-Suif, foyer de <CHARNAME> dans son enfance, dans l'espoir de découvrir dans les anciennes bibliothèques de la ville un moyen de rentrer chez elle. Mais au lieu de connaissance, elle n'y trouva que tristesse. Elle commença alors à errer sur Toril, acceptant des missions de mercenaire pratiquement vouées à l'échec. Certains se sont demandés si elle n'espérait pas secrètement trouver la mort, pour peut-être retrouver son amant dans l'après-vie. Cependant, le destin final de Tyris Flare reste un mystère.~
+@58   = ~Armure de Tyris Flare
+Cette solide armure de cuir a été créée pour Tyris afin de la protéger sans pour autant l'empêcher de lancer des sorts.
+
+PARAMETRES
+
+Capacités d'équipement :
+-1 au temps d'incantation des sorts
+
+CA : 6
+Poids : 15
+Force nécessaire : 6
+
+Non utilisable par :
+ Mage
+ Kensai
+ Moine
+ Justicier
+ Métamorphe~
+@59   = ~Tarik~ 
+@60   = ~Faites venir ma bien-aimée, Tyris.~
+@61   = ~Faites venir Tyris, l'amazone guerrière/mage.~
+// v10 - script g#tfcut1.baf
+@62   = ~"Bon sang... ?"~
+@101000 = ~Portrait alternatif 1~
+@101001 = ~Le PNJ n'est pas installe, passer le choix des portraits alternatifs...~
+@101002 = ~Portraits alternatifs de Tyris~
+
+@102000 = ~Portrait alternatif 2~
+
+@103000 = ~Portrait alternatif 3~
+
+@104000 = ~Portrait alternatif 4~
+
+@105000 = ~Portrait alternatif 5~
+
+@106000 = ~Portrait alternatif 6~
+
+@107000 = ~Portrait alternatif 7~
+

@@ -1,0 +1,85 @@
+@0    = ~Vous me suivez dans l'espoir de récupérer quelque chose qui vous tient à cœur. Je dis que plus vous persévérerez, plus vous perdrez.~
+
+@1    = ~Considérons la jeune Tyris ici présente. Ne serait-il pas affreux que quelque chose de terrible arrive à l'un d'entre vous ?~
+
+@2    = ~Une créature mort-vivante comme vous ne m'enlèvera pas <CHARNAME> !~
+
+@3    = ~Mais je me pose une question, a-t-il peur de vous perdre ? Voyons voir. Suivez-moi <CHARNAME> et vous perdrez bien plus que vous ne pouvez l'imaginer. Et cela commence maintenant !~
+
+@4    = ~Le combat final contre Bodhi
+
+Bodhi est apparue dans une embuscade peu avant que j'atteigne son antre, me prévenant qu'elle savait ce que je faisais et qu'elle me volait la personne la plus chère à mon cœur : Tyris. Avant de disparaître et de lâcher ses autres morts-vivants à mes trousses, Bodhi m'a dit que si je continuais, je pourrais perdre beaucoup plus que je ne croyais. Je ne peux pas abandonner le Rhynn Lanthorn... mais désormais, la vie et l'âme immortelle de quelqu'un que j'aime sont aussi en jeu !~
+
+@5    = ~Mais... non, je me suis déjà beaucoup trop préparée pour cette rencontre, <CHARNAME>. Je vous ai averti que vous perdriez beaucoup si vous persistiez à vous approcher de moi. Je n'ai pas menti.~
+
+@6    = ~Vous m'avez déjà pris beaucoup trop ! Vous allez me rendre les âmes d'Imoen et de Tyris !~
+
+@7    = ~Et vous avez tenu parole. Rendez-moi Tyris et peut-être que j'aurai pitié.~
+
+@8    = ~Je vous aurais pourchassée rien que pour Tyris. Elle compte beaucoup pour moi.~
+
+@9    = ~Vous accordez trop d'importance aux sentiments. L'enlèvement de Tyris ne vous sauvera pas.~
+
+@10   = ~Vous l'avez perdue à jamais, <CHARNAME>. Tyris s'est montrée assez réceptive à mes artifices. Je doute que vos efforts maladroits puissent inspirer la loyauté que j'ai obtenue avec une morsure et un regard.~
+
+@11   = ~Le combat final contre Bodhi
+
+Bodhi a fait de Tyris un vampire ! Ou presque... La transformation n'a peut-être pas eu le temps de s'opérer complètement pendant le bref laps de temps où Tyris est restée entre les mains de Bodhi. Espérons qu'on puisse la soigner ou alors je l'aurai perdue à jamais. Le conseiller de guerre elfe connaît peut-être un remède... ou Elhan...~
+
+@12   = ~Un stratagème intéressant, mais je suis sûre que son destin servira d'exemple, que vous souhaitiez son retour ou non.~
+
+@13   = ~Vos désirs sont des ordres, maîtresse.~
+
+@14   = ~Voyez-vous ça, <CHARNAME> ? Elle n'est même pas encore complètement pervertie et elle vous a déjà trahi. Préparez-vous à mourir de la main de votre bien-aimée !~
+
+@15   = ~Elhan ! A cause de vous, voici le corps à demi vampirisé de Tyris ! Je vous somme de vous expliquer !~
+
+@16   = ~Une de mes amies est atteinte de vampirisme. D'anciens textes disent que les disciples d'Oghma pourraient détenir un remède.~
+
+@17   = ~Je cherche des informations sur un livre indiquant comment soigner le vampirisme.~
+
+@18   = ~Venez-vous quérir la sagesse du Gardien du Savoir ? Le Dieu de la Sagesse attend.~
+
+@19   = ~Non merci, je n'ai pas besoin d'aide pour le moment.~
+
+@20   = ~J'ai perdu une personne qui m'est chère dans un combat avec sa sœur, Bodhi. Je cherche un moyen de la guérir.~
+
+@21   = ~Un être très cher a été emporté par un vampire. A quoi dois-je m'attendre lorsque je la retrouverai ?~
+
+@22   = ~Un être cher a été emporté par un vampire. Y a-t-il un moyen de la sauver ?~
+
+@23   = ~Je n'arrive pas à y croire...~ [g3mute]
+
+@24   = ~<CHARNAME>, je n'ai pas pu m'en empêcher. J'ai essayé. J'ai hurlé pour tenter de m'arrêter mais je ne pouvais pas...~
+
+@25   = ~Tout va bien Tyris. Je sais que ce n'était pas toi. je suis si heureux de t'avoir récupérée en un seul morceau.~
+
+@26   = ~Le combat final contre Bodhi
+
+Alors que je craignais depuis quelque temps que la vengeance finale de Bodhi serait de m'enlever à jamais Tyris, il semble que ce que disait le livre des légendes était vrai...... l'idole d'Amaunator a non seulement ramené Tyris à la vie, mais a aussi chassé sa malédiction de vampire.~
+
+@27   = ~Si cela peut t'aider, apprends que Bodhi est encore plus morte qu'elle ne l'était avant.~
+
+@28   = ~Faisons que cela ne se produise plus jamais, n'est-ce pas ?~
+
+@29   = ~Merci pour tout, <CHARNAME>. Et maintenant, sortons d'ici.~
+
+@30   = ~Cela me semble une bonne idée.~
+
+@31   = ~En fait je n'ai pas de place pour toi dans mon équipe en ce moment.~
+
+@32   = ~J'apprécie cela, mon chéri. Je ne veux jamais, au grand jamais, revivre quelque chose de la sorte. Et maintenant, sortons d'ici.~
+
+@33   = ~En tout cas je ferai mon possible. Je ne veux jamais, au grand jamais, revivre quelque chose de la sorte. Et maintenant, sortons d'ici.~
+
+@34   = ~Je t'aime, <CHARNAME>. J'espère que tu le sais.~
+
+@35   = ~C'est une blague ?! Après tout ce que nous avons traversé et tout ce que tu as fait pour me ramener, tu comptes me laisser sur le carreau ?~
+
+@36   = ~Je blague !~
+
+@37   = ~Je suis désolé Tyris.~
+
+@38   = ~Tu es vraiment cruel, <CHARNAME>. Tu as de la chance que je t'aime tant.~
+
+@39   = ~Je suppose que nos routes se séparent. Qui sait si nous nous reverrons...~
