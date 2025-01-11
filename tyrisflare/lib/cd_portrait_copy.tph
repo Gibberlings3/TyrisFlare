@@ -1,4 +1,9 @@
+/////                                                  \\\\\
+///// portrait function collection                     \\\\\
+/////                                                  \\\\\
+
 /*
+
 https://www.gibberlings3.net/forums/topic/29922-on-portrait-sizes/
  portrait sizes:
   42 x  42 - IWD2 square, cropped small portraits 'S' for game screen
@@ -8,6 +13,26 @@ https://www.gibberlings3.net/forums/topic/29922-on-portrait-sizes/
  110 x 170 - original BG2 record screen as 'M' portrait; original BG/IWD record screen as 'L' portrait
  169 x 266 - EE game screen/dialogue as 'M' portrait
  210 x 330 - original BG as 'G' portrait (unused?); original BG2 epilogue as 'L' portrait; original IWD as initial character selection portrait as 'G'; IWD2 as main portrait; EE epilogue/record screen as 'L' portrait
+
+used:
+  amber, as amber/lib/cd_portrait_copy.tph [local symlink]
+  angelo, as angelo/lib/cd_portrait_copy.tph [local symlink]
+  anishai, as anishai/lib/cd_portrait_copy.tph [local symlink]
+  blonde imoen, as blondeimmy/lib/cd_portrait_copy.tph [local symlink]
+  Haldamir, as haldamir/lib/cd_portrait_copy.tph [local symlink]
+  Hannah's Portrait Pack, as hannahs_portraits/lib/cd_portrait_copy.tph [local symlink]
+  Infinity Collection Portrait Pack, as cd_icpp/lib/cd_portrait_copy.tph [local symlink]
+  Plasmocat's BG NPC Portraits in BG2 Style, as plasmobg1bg2/lib/cd_portrait_copy.tph [local symlink]
+  Plasmocat's Picks of the Litter, as picks_of_the_litter/lib/cd_portrait_copy.tph [local symlink]
+  Plasmocat's Portrait Pack, as plasmoportraits/lib/cd_portrait_copy.tph [local symlink]
+  RoorenArt's Portrait Pack, as roorenart_bg2/lib/cd_portrait_copy.tph [local symlink]
+
+platform:
+  all games
+ 
+version history: 
+  unknown
+
 */
  
 ACTION_CLEAR_ARRAY ~cd_portrait_map~ // just in case
@@ -110,6 +135,7 @@ BEGIN
 	
 	  COPY_EXISTING ~%destination%%suffix%.bmp~ ~override~
 	    READ_LONG 0x16 height
+            PATCH_IF height > 330 BEGIN SET height = 330 END
 	    BUT_ONLY
 	  
 	  ACTION_IF FILE_EXISTS ~%source_path%/%source%_%height%.bmp~ THEN BEGIN

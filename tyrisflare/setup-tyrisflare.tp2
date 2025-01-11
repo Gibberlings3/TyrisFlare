@@ -19,35 +19,33 @@ ALWAYS
       OUTER_SET EVAL ~%name_source%~ = bg2_chapter
     END
 
-    // Convert strings to UTF-8 for BGEE/BG2EE
-    // No exception, everything needs to be converted
-    // setup.tra contains in game texts as well as installation texts and need to be converted
-    ACTION_DEFINE_ARRAY rh#noconvert BEGIN END
-    // any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
-    ACTION_DEFINE_ARRAY rh#reload BEGIN setup-tyrisflare END
+    ACTION_IF GAME_IS ~bgee bg2ee eet~ THEN BEGIN
+      
+      OUTER_SPRINT ~tra_location~ ~tyrisflare/languages~     
+      LOAD_TRA ~tyrisflare/languages/%LANGUAGE%/ee.tra~      
+    
+   END ELSE BEGIN    
+      
+      OUTER_SPRINT ~tra_location~ ~weidu_external/tyrisflare/languages~   
 
-    LAF HANDLE_CHARSETS
-      INT_VAR
-        infer_charsets = 1
-      STR_VAR
-        tra_path = EVAL ~tyrisflare/languages~
-        noconvert_array = rh#noconvert
-        reload_array = rh#reload
+      // convert strings from UTF-8 for originals  
+      ACTION_DEFINE_ARRAY cdnoconvert BEGIN ee END // strings exclusively for the EE
+      ACTION_DEFINE_ARRAY cdreload BEGIN setup-tyrisflare END // actual content strings
+      LAF HANDLE_CHARSETS INT_VAR from_utf8 = 1 infer_charsets = 1 
+                          STR_VAR default_language = ~english~ tra_path = ~tyrisflare/languages~ out_path = ~weidu_external/tyrisflare/languages~ noconvert_array = cdnoconvert reload_array = cdreload END
+
     END
 
     INCLUDE ~tyrisflare/lib/cd_portrait_copy.tph~
+    
   END
   
-END
-
-ALWAYS
-
 END
 
 /* Isaya : display in native selected language if available, otherwise english */
 README ~tyrisflare/readme-tyrisflare-%LANGUAGE%.html~  ~tyrisflare/readme-tyrisflare.html~
 
-AUTO_TRA ~tyrisflare/languages/%s~
+AUTO_TRA ~%tra_location%/%s~
 LANGUAGE ~English~ ~English~ ~tyrisflare/languages/english/setup-tyrisflare.tra~
 LANGUAGE ~Russian (by shaker653 arcanecoast.ru)~ ~Russian~ ~tyrisflare/languages/russian/setup-tyrisflare.tra~
 LANGUAGE ~Francais~ ~French~ ~tyrisflare/languages/french/setup-tyrisflare.tra~
@@ -57,8 +55,6 @@ BEGIN @0
 LABEL TyrisFlare-main
 
 ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
-
-  LOAD_TRA ~tyrisflare/languages/%LANGUAGE%/ee.tra~
   
   ADD_JOURNAL EXISTING @4 @11 @26 USING ~tyrisflare/languages/%LANGUAGE%/bodhiabduction.tra~
   
