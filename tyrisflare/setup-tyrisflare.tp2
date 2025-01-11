@@ -51,6 +51,7 @@ AUTO_TRA ~tyrisflare/languages/%s~
 LANGUAGE ~English~ ~English~ ~tyrisflare/languages/english/setup-tyrisflare.tra~
 LANGUAGE ~Russian (by shaker653 arcanecoast.ru)~ ~Russian~ ~tyrisflare/languages/russian/setup-tyrisflare.tra~
 LANGUAGE ~Francais~ ~French~ ~tyrisflare/languages/french/setup-tyrisflare.tra~
+LANGUAGE ~Simplified Chinese(tanslation by anca_qin)~ ~schinese~ ~tyrisflare/languages/schinese/setup-tyrisflare.tra~
 
 BEGIN @0
 LABEL TyrisFlare-main
